@@ -1,0 +1,869 @@
+<!DOCTYPE html>
+<html lang="pl" class="scroll-smooth">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Stowarzyszenie Przyjaciół Duszpasterstwa Akademickiego Wawrzyny</title>
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        primary: {
+                            DEFAULT: '#367664',
+                            light: '#4b9882',
+                            dark: '#265447',
+                        }
+                    },
+                    fontFamily: {
+                        sans: ['Inter', 'sans-serif'],
+                    }
+                }
+            }
+        }
+    </script>
+
+    <script src="https://unpkg.com/lucide@latest"></script>
+
+    <style>
+        .glass-nav {
+            background: rgba(255, 255, 255, 0.95);
+            backdrop-filter: blur(10px);
+        }
+
+        .hero-pattern {
+            background-color: #367664;
+            background-image: linear-gradient(135deg, #265447 0%, #367664 100%);
+        }
+
+        .list-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 1rem;
+        }
+
+        .gallery-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+            gap: 1.5rem;
+        }
+
+        .gallery-item {
+            aspect-ratio: 4/3;
+            overflow: hidden;
+            border-radius: 0.75rem;
+        }
+
+        .gallery-item img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            transition: transform 0.3s ease;
+        }
+
+        .gallery-item:hover img {
+            transform: scale(1.05);
+        }
+    </style>
+</head>
+
+<body class="font-sans text-gray-800 antialiased bg-gray-50 flex flex-col min-h-screen">
+
+    <div class="bg-yellow-50 border-b border-yellow-200 text-yellow-800 px-4 py-3 text-center text-sm relative z-[60]">
+        <div class="max-w-7xl mx-auto flex flex-col sm:flex-row items-center justify-center gap-2">
+            <i data-lucide="mail-warning" class="w-5 h-5 flex-shrink-0"></i>
+            <span><strong>WAŻNE:</strong> Zwracamy się z prośbą o przejście na korespondencję e-mailową, by obniżyć
+                koszty.</span>
+            <a href="#korespondencja" class="font-bold underline hover:text-yellow-600 ml-2">Dowiedz się więcej</a>
+        </div>
+    </div>
+
+    <nav class="sticky top-0 w-full z-50 glass-nav border-b border-gray-200 transition-all duration-300 shadow-sm">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="flex justify-between h-20">
+                <div class="flex items-center">
+                    <a href="#" class="flex items-center gap-3 group">
+                        <div
+                            class="w-10 h-10 bg-primary rounded-lg flex items-center justify-center text-white group-hover:bg-primary-dark transition-colors">
+                            <i data-lucide="church" class="w-6 h-6"></i>
+                        </div>
+                        <span class="font-bold text-lg leading-tight text-gray-900 hidden lg:block">
+                            Stowarzyszenie<br><span class="text-primary text-sm">Wawrzyny</span>
+                        </span>
+                    </a>
+                </div>
+
+                <div class="hidden xl:flex items-center space-x-6">
+                    <a href="#aktualnosci"
+                        class="text-gray-600 hover:text-primary font-medium transition-colors">Aktualności</a>
+                    <a href="#rocznica"
+                        class="text-gray-600 hover:text-primary font-medium transition-colors flex items-center gap-1"><i
+                            data-lucide="calendar" class="w-4 h-4 text-primary"></i> V Rocznica</a>
+                    <a href="#dziedzictwo"
+                        class="text-gray-600 hover:text-primary font-medium transition-colors">Dziedzictwo Orzecha</a>
+                    <a href="#podatek" class="text-gray-600 hover:text-primary font-medium transition-colors">1.5%
+                        Podatku</a>
+                    <a href="#darowizny"
+                        class="text-gray-600 hover:text-primary font-medium transition-colors">Darowizny</a>
+                    <a href="#kontakt"
+                        class="bg-primary text-white px-5 py-2 rounded-full font-medium hover:bg-primary-dark transition-colors shadow-md shadow-primary/30">Kontakt</a>
+                </div>
+
+                <div class="flex items-center xl:hidden">
+                    <button id="mobile-menu-btn" class="text-gray-600 hover:text-primary focus:outline-none p-2">
+                        <i data-lucide="menu" class="w-6 h-6"></i>
+                    </button>
+                </div>
+            </div>
+        </div>
+
+        <div id="mobile-menu"
+            class="hidden xl:hidden bg-white border-t border-gray-100 shadow-lg absolute w-full max-h-[80vh] overflow-y-auto">
+            <div class="px-4 pt-2 pb-6 space-y-1">
+                <a href="#aktualnosci"
+                    class="block px-3 py-3 text-base font-medium text-gray-700 hover:text-primary hover:bg-gray-50 rounded-md mobile-link">Aktualności
+                    (List 2026)</a>
+                <a href="#rocznica"
+                    class="block px-3 py-3 text-base font-medium text-gray-700 hover:text-primary hover:bg-gray-50 rounded-md mobile-link">V
+                    Rocznica - Kalendarium</a>
+                <a href="#dziedzictwo"
+                    class="block px-3 py-3 text-base font-medium text-gray-700 hover:text-primary hover:bg-gray-50 rounded-md mobile-link">Dziedzictwo
+                    Orzecha</a>
+                <a href="#podatek"
+                    class="block px-3 py-3 text-base font-medium text-gray-700 hover:text-primary hover:bg-gray-50 rounded-md mobile-link">1.5%
+                    Podatku</a>
+                <a href="#darowizny"
+                    class="block px-3 py-3 text-base font-medium text-gray-700 hover:text-primary hover:bg-gray-50 rounded-md mobile-link">Darowizny</a>
+                <a href="#korespondencja"
+                    class="block px-3 py-3 text-base font-medium text-yellow-700 bg-yellow-50 rounded-md mobile-link">Ważne:
+                    Zmiana na E-mail</a>
+                <a href="#kontakt"
+                    class="block px-3 py-3 text-base font-medium text-primary bg-primary/10 rounded-md mobile-link">Kontakt</a>
+            </div>
+        </div>
+    </nav>
+
+    <header class="pt-20 pb-16 md:pt-32 md:pb-24 hero-pattern text-white">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
+            <div
+                class="inline-flex items-center gap-2 px-4 py-2 rounded-full bg-white/20 backdrop-blur-sm text-sm font-medium mb-8 border border-white/30">
+                <i data-lucide="heart-handshake" class="w-4 h-4"></i>
+                Organizacja Pożytku Publicznego (OPP)
+            </div>
+            <h1 class="text-4xl md:text-5xl lg:text-6xl font-bold tracking-tight mb-6 leading-tight">
+                Stowarzyszenie Przyjaciół<br>
+                Duszpasterstwa Akademickiego <span class="text-green-200">„Wawrzyny”</span>
+            </h1>
+            <p class="mt-4 text-xl md:text-2xl text-green-50 max-w-3xl mx-auto font-light mb-10">
+                Duszpasterski Parasol Bezpieczeństwa. Pielęgnujemy dziedzictwo „Orzecha”, budujemy więzi, wspieramy od
+                1995 roku.
+            </p>
+            <div class="flex flex-col sm:flex-row justify-center gap-4">
+                <a href="#podatek"
+                    class="bg-white text-primary px-8 py-3.5 rounded-full font-bold text-lg hover:bg-gray-100 transition-colors shadow-lg flex items-center justify-center gap-2">
+                    <i data-lucide="percent" class="w-5 h-5"></i>
+                    Przekaż 1,5%
+                </a>
+                <a href="#rocznica"
+                    class="bg-transparent border-2 border-white text-white px-8 py-3.5 rounded-full font-bold text-lg hover:bg-white/10 transition-colors flex items-center justify-center gap-2">
+                    <i data-lucide="calendar-heart" class="w-5 h-5"></i>
+                    V Rocznica (Maj 2026)
+                </a>
+            </div>
+        </div>
+    </header>
+
+    <section id="aktualnosci" class="py-20 bg-white">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="mb-12 text-center">
+                <span class="text-primary font-bold tracking-wider uppercase text-sm mb-2 block">Wrocław, Marzec
+                    2026</span>
+                <h2 class="text-3xl md:text-4xl font-bold text-gray-900 mb-4">List do Przyjaciół Wawrzynów</h2>
+                <p class="text-xl text-gray-600 max-w-2xl mx-auto">Dziękujemy i działamy dalej!</p>
+            </div>
+
+            <div class="grid grid-cols-1 lg:grid-cols-2 gap-12">
+                <div class="prose prose-lg text-gray-600">
+                    <p><strong>Drodzy Przyjaciele Wspólnoty Wawrzynowej,</strong></p>
+                    <p>
+                        Z serca dziękujemy za Waszą pamięć, modlitwę i wszelkie wsparcie, które okazujecie naszej
+                        Wspólnocie. Wasza hojność – zarówno poprzez 1,5% podatku, jak i darowizny – pozwala nam
+                        realizować cele statutowe i kontynuować to, co dla nas wszystkich ważne.
+                    </p>
+                    <p>
+                        Szczególną wartością są dla nas spotkania z Wami – rozmowy, wspólna obecność i udział w
+                        wydarzeniach poświęconych Orzechowi. To właśnie one dają nam siłę i motywację do dalszego
+                        działania i pielęgnowania pamięci o naszym Duszpasterzu.
+                    </p>
+
+                    <div class="bg-primary/5 border-l-4 border-primary p-6 rounded-r-lg mt-8">
+                        <h3 class="text-xl font-bold text-gray-900 mb-3 flex items-center gap-2">
+                            <i data-lucide="users" class="w-6 h-6 text-primary"></i>
+                            Opieka nad D.A. „Wawrzyny”
+                        </h3>
+                        <p class="text-gray-800 text-base mb-0">
+                            Mija piąty rok od odejścia do Domu Ojca naszego duszpasterza, niezapomnianego „Orzecha”.
+                            Wspólnota DA „Wawrzyny” pozostaje miejscem formacji i duchowego rozwoju młodzieży
+                            studenckiej, a opiekę duszpasterską sprawują obecnie ojcowie Klaretyni – <strong>o. Mateusz
+                                i o. Marek</strong>.
+                        </p>
+                    </div>
+                </div>
+
+                <div>
+                    <h3 class="text-2xl font-bold text-gray-900 mb-6 flex items-center gap-3">
+                        <i data-lucide="check-circle" class="w-7 h-7 text-primary"></i>
+                        Wasze wsparcie w 2025 roku
+                    </h3>
+                    <p class="text-gray-600 mb-6">
+                        W minionym roku Stowarzyszenie konsekwentnie wspierało materialnie działalność ośrodka przy ul.
+                        Bujwida. Dzięki otrzymanym środkom sfinansowaliśmy m.in.:
+                    </p>
+
+                    <div class="space-y-4">
+                        <div class="flex items-start gap-4 p-4 bg-gray-50 rounded-xl border border-gray-100">
+                            <div class="bg-green-100 p-2 rounded-lg text-green-700 mt-1">
+                                <i data-lucide="coffee" class="w-5 h-5"></i>
+                            </div>
+                            <div>
+                                <h4 class="font-bold text-gray-900">Codzienne życie wspólnoty</h4>
+                                <p class="text-sm text-gray-600">Artykuły spożywcze na regularne spotkania: śniadania
+                                    „siódemki”, czwartkowe Wieczerze, spotkanie wigilijne i integracyjne oraz środki
+                                    czystości dla ośrodka.</p>
+                            </div>
+                        </div>
+
+                        <div class="flex items-start gap-4 p-4 bg-gray-50 rounded-xl border border-gray-100">
+                            <div class="bg-blue-100 p-2 rounded-lg text-blue-700 mt-1">
+                                <i data-lucide="book-open" class="w-5 h-5"></i>
+                            </div>
+                            <div>
+                                <h4 class="font-bold text-gray-900">Formacja i rozwój</h4>
+                                <p class="text-sm text-gray-600">Rekolekcje: „Na Dobry Początek”, wielkopostne i
+                                    adwentowe. Dofinansowanie wykładów patriotycznych, warsztatów kulinarnych i
+                                    spotkania na zakończenie roku.</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="rocznica" class="py-20 bg-gray-900 text-white relative overflow-hidden">
+        <div class="absolute inset-0 opacity-10">
+            <svg class="absolute left-full transform -translate-x-1/2 -translate-y-1/4" width="404" height="784"
+                fill="none" viewBox="0 0 404 784">
+                <defs>
+                    <pattern id="b1e6e422-73f8-40a5-b5d9-cfc462c8d030" x="0" y="0" width="20" height="20"
+                        patternUnits="userSpaceOnUse">
+                        <rect x="0" y="0" width="4" height="4" fill="currentColor"></rect>
+                    </pattern>
+                </defs>
+                <rect width="404" height="784" fill="url(#b1e6e422-73f8-40a5-b5d9-cfc462c8d030)"></rect>
+            </svg>
+        </div>
+
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
+            <div class="text-center mb-16">
+                <span
+                    class="inline-flex items-center gap-2 px-4 py-2 rounded-full bg-primary/30 text-primary-light text-sm font-bold mb-4 border border-primary/50 uppercase tracking-widest">
+                    Zaproszenie
+                </span>
+                <h2 class="text-3xl md:text-5xl font-bold mb-6 text-white">V Rocznica Dziękczynienia</h2>
+                <p class="text-xl text-gray-300 max-w-3xl mx-auto">
+                    za dar życia ks. Stanisława „Orzecha” Orzechowskiego.<br>
+                    <span class="text-primary-light font-medium">29–30 maja 2026, ul. Bujwida 51</span>
+                </p>
+                <p class="mt-4 text-gray-400 max-w-2xl mx-auto">
+                    Serdecznie zapraszamy absolwentów, studentów, mieszkańców Wrocławia, przyjaciół Wspólnoty
+                    Wawrzynowej oraz Pieszej Pielgrzymki Wrocławskiej!
+                </p>
+            </div>
+
+            <div class="grid grid-cols-1 md:grid-cols-3 gap-6 mb-12">
+                <div
+                    class="bg-gray-800 rounded-2xl p-8 border border-gray-700 hover:border-primary transition-colors relative">
+                    <div
+                        class="absolute top-0 right-0 bg-gray-700 text-gray-300 px-4 py-1 rounded-bl-xl rounded-tr-2xl text-sm font-bold">
+                        Sobota</div>
+                    <h3 class="text-2xl font-bold text-white mb-2 flex items-center gap-2">
+                        <i data-lucide="map" class="text-primary w-6 h-6"></i> 16 Maja
+                    </h3>
+                    <p class="text-primary-light font-medium mb-6">Pielgrzymka</p>
+                    <ul class="space-y-4 text-gray-300 text-sm">
+                        <li class="flex items-start gap-3">
+                            <span
+                                class="font-mono text-white bg-gray-700 px-2 py-0.5 rounded text-xs mt-0.5">Rano</span>
+                            <span>Msza Święta w kaplicy akademickiej (ul. Bujwida) i wyruszenie na szlak.</span>
+                        </li>
+                        <li class="flex items-start gap-3">
+                            <i data-lucide="flag" class="w-4 h-4 text-primary flex-shrink-0 mt-1"></i>
+                            <span>Zakończenie w Morzęcinie.</span>
+                        </li>
+                    </ul>
+                </div>
+
+                <div
+                    class="bg-gray-800 rounded-2xl p-8 border border-gray-700 hover:border-primary transition-colors relative">
+                    <div
+                        class="absolute top-0 right-0 bg-primary text-white px-4 py-1 rounded-bl-xl rounded-tr-2xl text-sm font-bold">
+                        Piątek</div>
+                    <h3 class="text-2xl font-bold text-white mb-2 flex items-center gap-2">
+                        <i data-lucide="moon" class="text-primary w-6 h-6"></i> 29 Maja
+                    </h3>
+                    <p class="text-primary-light font-medium mb-6">Czuwanie i modlitwa</p>
+                    <ul class="space-y-4 text-gray-300 text-sm">
+                        <li class="flex items-start gap-3">
+                            <span
+                                class="font-mono text-white bg-gray-700 px-2 py-0.5 rounded text-xs mt-0.5">19:30</span>
+                            <span>Modlitwa i Adoracja w kaplicy akademickiej.</span>
+                        </li>
+                        <li class="flex items-start gap-3">
+                            <span
+                                class="font-mono text-white bg-gray-700 px-2 py-0.5 rounded text-xs mt-0.5">20:30</span>
+                            <span>Uroczysta Eucharystia.</span>
+                        </li>
+                        <li class="flex items-start gap-3">
+                            <span
+                                class="font-mono text-white bg-gray-700 px-2 py-0.5 rounded text-xs mt-0.5">21:30</span>
+                            <span>Konferencja i wspólna agapa na zakończenie.</span>
+                        </li>
+                    </ul>
+                </div>
+
+                <div
+                    class="bg-gray-800 rounded-2xl p-8 border border-primary shadow-[0_0_15px_rgba(54,118,100,0.3)] relative transform md:-translate-y-4">
+                    <div
+                        class="absolute top-0 right-0 bg-primary text-white px-4 py-1 rounded-bl-xl rounded-tr-2xl text-sm font-bold">
+                        Sobota</div>
+                    <h3 class="text-2xl font-bold text-white mb-2 flex items-center gap-2">
+                        <i data-lucide="sun" class="text-primary w-6 h-6"></i> 30 Maja
+                    </h3>
+                    <p class="text-primary-light font-medium mb-6">Świętowanie i Koncert</p>
+                    <ul class="space-y-4 text-gray-300 text-sm">
+                        <li class="flex items-start gap-3">
+                            <span
+                                class="font-mono text-white bg-gray-700 px-2 py-0.5 rounded text-xs mt-0.5">12:00</span>
+                            <span>Eucharystia.</span>
+                        </li>
+                        <li class="flex items-start gap-3">
+                            <span
+                                class="font-mono text-white bg-gray-700 px-2 py-0.5 rounded text-xs mt-0.5">13:15</span>
+                            <span>Koronka do Bożego Miłosierdzia przy grobie Orzecha i poczęstunek.</span>
+                        </li>
+                        <li class="flex items-start gap-3">
+                            <span
+                                class="font-mono text-white bg-gray-700 px-2 py-0.5 rounded text-xs mt-0.5">~15:00</span>
+                            <span>Majówka oraz koncert <strong>„40 i 30 na 70”</strong>, a po nim modlitwa uwielbienia i
+                                spotkanie rodzinne (niespodzianki dla dzieci).</span>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+
+            <div
+                class="bg-white/10 backdrop-blur-md rounded-2xl p-6 md:p-8 flex flex-col md:flex-row items-center justify-between gap-6 border border-white/20">
+                <div>
+                    <h4 class="text-xl font-bold text-white mb-2 flex items-center gap-2">
+                        <i data-lucide="hand-heart" class="text-yellow-400 w-6 h-6"></i> Szukamy wolontariuszy!
+                    </h4>
+                    <p class="text-gray-300 text-sm">
+                        Jeśli masz czas i chciałbyś pomóc w przygotowaniu tego wydarzenia, skontaktuj się z nami.
+                        Szczegóły również na <a href="https://orzech.wroc.pl" target="_blank"
+                            class="text-primary-light underline">orzech.wroc.pl</a>.
+                    </p>
+                </div>
+                <div class="flex flex-col gap-2 shrink-0 text-sm">
+                    <a href="tel:+48608095757"
+                        class="bg-gray-800 hover:bg-gray-700 px-4 py-2 rounded-lg flex items-center gap-3 transition-colors text-white">
+                        <i data-lucide="phone" class="w-4 h-4 text-primary-light"></i> Kuzyn: 608 095 757
+                    </a>
+                    <a href="tel:+48698781432"
+                        class="bg-gray-800 hover:bg-gray-700 px-4 py-2 rounded-lg flex items-center gap-3 transition-colors text-white">
+                        <i data-lucide="phone" class="w-4 h-4 text-primary-light"></i> ks. Łukasz Alwaro: 698 781 432
+                    </a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="dziedzictwo" class="py-20 bg-gray-50 border-y border-gray-200">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="text-center max-w-3xl mx-auto mb-16">
+                <h2 class="text-3xl font-bold text-gray-900 mb-4">Zachowujemy Spuściznę Orzecha</h2>
+                <p class="text-gray-600 text-lg">
+                    Pielęgnowanie pamięci o naszym duszpasterzu to jeden z głównych celów statutowych Stowarzyszenia.
+                    Zobacz najważniejsze inicjatywy z 2025 roku.
+                </p>
+            </div>
+
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+                <div class="bg-white p-8 rounded-2xl shadow-md border border-gray-100 flex flex-col h-full">
+                    <div
+                        class="w-12 h-12 bg-orange-100 text-orange-600 rounded-xl flex items-center justify-center mb-6">
+                        <i data-lucide="baby" class="w-6 h-6"></i>
+                    </div>
+                    <h3 class="text-xl font-bold text-gray-900 mb-3">Orzech patronem przedszkola</h3>
+                    <p class="text-sm text-gray-500 mb-2 font-medium">22 marca 2025</p>
+                    <p class="text-gray-600 flex-grow text-sm leading-relaxed">
+                        Przedszkole Publiczne „Koszałki-Opałki” we Wrocławiu otrzymało imię ks. Stanisława „Orzecha”
+                        Orzechowskiego. Cieszymy się, że najmłodsi uczestniczą w inicjatywach takich jak „Dekalog dla
+                        Małych”, ucząc się dobra i wrażliwości.
+                    </p>
+                </div>
+
+                <div
+                    class="bg-white p-8 rounded-2xl shadow-md border border-gray-100 flex flex-col h-full relative overflow-hidden">
+                    <div class="absolute top-0 right-0 w-24 h-24 bg-primary/5 rounded-bl-full"></div>
+                    <div
+                        class="w-12 h-12 bg-primary/20 text-primary rounded-xl flex items-center justify-center mb-6 relative z-10">
+                        <i data-lucide="archive" class="w-6 h-6"></i>
+                    </div>
+                    <h3 class="text-xl font-bold text-gray-900 mb-3 relative z-10">Porozumienie i Izba Pamięci</h3>
+                    <p class="text-sm text-gray-500 mb-2 font-medium">24 marca 2025</p>
+                    <p class="text-gray-600 flex-grow text-sm leading-relaxed mb-4 relative z-10">
+                        Wspólnie z Ośrodkiem „Pamięć i Przyszłość” rozpoczęliśmy digitalizację pamiątek i dokumentów. To
+                        krok w ramach programu „Ocalone dziedzictwa” prowadzący do utworzenia Izby Pamięci.
+                    </p>
+                    <div class="bg-gray-50 p-3 rounded-lg border border-gray-200 text-xs text-gray-700 relative z-10">
+                        <strong>Szukamy chętnych do archiwizowania!</strong><br>
+                        Kontakt: Kuzyn (608 095 757), Grzegorz (697 985 454)
+                    </div>
+                </div>
+
+                <div class="bg-white p-8 rounded-2xl shadow-md border border-gray-100 flex flex-col h-full">
+                    <div class="w-12 h-12 bg-blue-100 text-blue-600 rounded-xl flex items-center justify-center mb-6">
+                        <i data-lucide="image" class="w-6 h-6"></i>
+                    </div>
+                    <h3 class="text-xl font-bold text-gray-900 mb-3">„Ma pecha, kto nie znał Orzecha”</h3>
+                    <p class="text-sm text-gray-500 mb-2 font-medium">Cały rok</p>
+                    <p class="text-gray-600 flex-grow text-sm leading-relaxed mb-4">
+                        Wystawa na 18 roll-upach odwiedziła już ponad 50 miejsc (w tym kościół św. Stanisława Kostki w
+                        Warszawie). Zbieramy wzruszające świadectwa w kronice, które trafią do Izby Pamięci.
+                    </p>
+                    <div class="text-xs text-primary font-medium cursor-pointer hover:underline">
+                        Chcesz wystawę w parafii? Mariusz: 607 324 063
+                    </div>
+                </div>
+            </div>
+
+            <div class="mt-8 bg-white rounded-2xl p-6 md:p-8 shadow-md border border-gray-100">
+                <h3 class="font-bold text-lg mb-4 text-gray-900 border-b pb-2">Wydarzenia Edukacyjno-Historyczne
+                    (Listopad 2025)</h3>
+                <ul class="space-y-4 text-sm text-gray-600">
+                    <li class="flex gap-4 items-start">
+                        <span class="font-bold text-primary whitespace-nowrap">06.11</span>
+                        <span>Panel dyskusyjny Civitas Christiana: <em>„Do żywego mnie obchodzi to, co się dzieje z
+                                Polską…”</em> – o patriotyzmie wg ks. Orzecha.</span>
+                    </li>
+                    <li class="flex gap-4 items-start">
+                        <span class="font-bold text-primary whitespace-nowrap">19.11</span>
+                        <span>Msza Św. w intencji Orzecha oraz pierwsze historyczne oprowadzanie po DA Wawrzyny
+                            (wspomnienia z czasu stanu wojennego i rozbudowy).</span>
+                    </li>
+                    <li class="flex gap-4 items-start">
+                        <span class="font-bold text-primary whitespace-nowrap">23.11</span>
+                        <span>Oława (Kino Odra): Pokaz filmu <em>„Orzech...”</em> oraz premiera odcinka <em>„Rodzina to
+                                drużyna”</em> na zaproszenie Fundacji dla Rodziny.</span>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </section>
+
+    <section class="py-20 bg-gray-900 text-white relative overflow-hidden">
+        <div class="absolute inset-0 opacity-20">
+            <img src="https://images.unsplash.com/photo-1485005087593-1628d0ebafb3?auto=format&fit=crop&q=80"
+                alt="Film background" class="w-full h-full object-cover">
+        </div>
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
+
+            <div class="grid grid-cols-1 lg:grid-cols-2 gap-16 items-start">
+
+                <div>
+                    <div
+                        class="inline-flex items-center gap-2 bg-red-600 text-white px-3 py-1 rounded-full text-xs font-bold uppercase tracking-wider mb-6">
+                        <i data-lucide="youtube" class="w-4 h-4"></i> Nowy Projekt
+                    </div>
+                    <h2 class="text-3xl md:text-4xl font-bold mb-6 text-white">Projekt „Dekalog Orzecha”</h2>
+                    <p class="text-gray-300 text-base mb-6 leading-relaxed">
+                        To duchowe świadectwo przeniesione w język nowoczesnych mediów. Ewangelia, która wychodzi z
+                        Kościoła do YouTube. Pokazujemy, że Orzech to nie tylko historia – jego dziedzictwo wciąż wydaje
+                        wspaniałe owoce.
+                    </p>
+                    <p class="text-gray-400 text-sm mb-6">
+                        Planujemy produkcję 10 reportaży-wywiadów z ludźmi, na których ks. Orzechowski wywarł ogromny
+                        wpływ. Dotychczas zrealizowaliśmy m.in.:
+                    </p>
+
+                    <ul class="space-y-4 mb-8">
+                        <li class="bg-gray-800/80 p-4 rounded-xl border border-gray-700">
+                            <strong class="text-primary-light block mb-1">Historia ks. Jakuba Bartczaka</strong>
+                            <span class="text-sm text-gray-300">Niezwykły kapłan, który wybrał tę drogę pod wpływem
+                                osobowości Orzecha.</span>
+                        </li>
+                        <li class="bg-gray-800/80 p-4 rounded-xl border border-gray-700">
+                            <strong class="text-primary-light block mb-1">„Ważne, żeby się lubić” (Paweł i Iza
+                                Lipscy)</strong>
+                            <span class="text-sm text-gray-300">O pięknie małżeństwa i przezwyciężaniu trudności dzięki
+                                radom, które zapadły im w serca.</span>
+                        </li>
+                        <li class="bg-gray-800/80 p-4 rounded-xl border border-gray-700">
+                            <strong class="text-primary-light block mb-1">„Rodzina to drużyna” (Justyna i
+                                Maciej)</strong>
+                            <span class="text-sm text-gray-300">Inspirująca opowieść o roli żony i matki realizującej
+                                swoje pasje przy wychowaniu pięciorga dzieci.</span>
+                        </li>
+                    </ul>
+
+                    <a href="https://orzech.wroc.pl/dekalog/" target="_blank"
+                        class="inline-flex items-center gap-2 text-white border border-white px-6 py-3 rounded-full hover:bg-white hover:text-gray-900 transition-colors font-medium">
+                        Oglądaj odcinki <i data-lucide="external-link" class="w-4 h-4"></i>
+                    </a>
+                </div>
+
+                <div>
+                    <div
+                        class="bg-primary-dark/80 backdrop-blur p-8 rounded-3xl border border-primary-light mb-10 shadow-2xl">
+                        <h3 class="text-2xl font-bold mb-4 flex items-center gap-2">
+                            <i data-lucide="clapperboard" class="w-6 h-6 text-primary-light"></i> Jak możesz pomóc?
+                        </h3>
+                        <p class="text-sm text-green-50 mb-6">
+                            Każdy odcinek to inwestycja w czyjeś nawrócenie i ocalenie. Zostań Patronem Odcinka, módl
+                            się za nas lub po prostu udostępniaj nasze filmy dalej!
+                        </p>
+
+                        <div class="bg-black/30 p-5 rounded-xl border border-white/10 mb-4 text-center">
+                            <p class="text-xs uppercase text-gray-400 mb-1 tracking-widest">Konto dedykowane na
+                                produkcję filmów</p>
+                            <p class="font-mono text-xl md:text-2xl font-bold text-white tracking-wider break-all">
+                                93 1090 2590 0000 0001 3239 1489
+                            </p>
+                            <p
+                                class="text-sm text-primary-light mt-2 font-medium bg-primary-dark/50 inline-block px-3 py-1 rounded">
+                                Dopisek: Film – Dekalog Orzecha</p>
+                        </div>
+                    </div>
+
+                    <div class="pl-4 border-l-2 border-gray-700">
+                        <h4 class="text-lg font-bold text-gray-300 mb-2">Film dokumentalny „Orzech” (2020)</h4>
+                        <p class="text-sm text-gray-400 leading-relaxed mb-4">
+                            Pamiętacie nasz pierwszy pełnometrażowy dokument (nagrodzony Złotym Opornikiem)? Zawiera
+                            unikalne archiwalia i świadectwa. Stowarzyszenie w dużym zakresie wsparło jego realizację, a
+                            teraz kontynuujemy to dzieło poprzez nową serię YouTube.
+                        </p>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </section>
+
+    <section class="py-16 bg-primary text-white">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
+            <i data-lucide="cassette-tape" class="w-12 h-12 mx-auto mb-4 opacity-80"></i>
+            <h2 class="text-3xl font-bold mb-4">Tworzymy Izbę Pamięci – Zbieramy Wspomnienia</h2>
+            <p class="text-lg text-primary-light max-w-2xl mx-auto mb-8 font-medium">
+                Aby obraz działalności księdza był pełniejszy, poszukujemy kaset VHS, plików MP3, zdjęć oraz Twoich
+                spisanych lub nagranych (np. telefonem) wspomnień!
+            </p>
+            <div class="flex flex-wrap justify-center gap-4">
+                <a href="mailto:stowarzyszenie@wawrzyny.wroc.pl"
+                    class="bg-white text-primary px-6 py-3 rounded-full font-bold hover:bg-gray-100 transition-colors flex items-center gap-2">
+                    <i data-lucide="mail" class="w-5 h-5"></i> Wyślij e-mail
+                </a>
+                <a href="https://www.orzech.wroc.pl" target="_blank"
+                    class="bg-transparent border border-white text-white px-6 py-3 rounded-full font-bold hover:bg-white/10 transition-colors flex items-center gap-2">
+                    <i data-lucide="file-text" class="w-5 h-5"></i> Formularz na stronie
+                </a>
+                <a href="tel:+48608095757"
+                    class="bg-transparent border border-white text-white px-6 py-3 rounded-full font-bold hover:bg-white/10 transition-colors flex items-center gap-2">
+                    <i data-lucide="phone" class="w-5 h-5"></i> Kuzyn: 608 095 757
+                </a>
+            </div>
+        </div>
+    </section>
+
+    <section id="podatek" class="py-20 bg-gray-50 border-y border-gray-200">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="bg-white rounded-3xl shadow-xl overflow-hidden border border-gray-100">
+                <div class="grid grid-cols-1 lg:grid-cols-5">
+
+                    <div class="lg:col-span-2 bg-gray-900 text-white p-10 flex flex-col justify-center">
+                        <h2 class="text-3xl md:text-4xl font-bold mb-4 text-white">Z 1,5% WIELE DOBRA!</h2>
+                        <p class="text-gray-300 text-lg mb-8 opacity-90">
+                            Czas rozliczeń to moment, w którym możesz wesprzeć naszą działalność bez dodatkowych
+                            kosztów.
+                        </p>
+
+                        <div class="bg-white/10 rounded-2xl p-6 border border-white/20 backdrop-blur-sm mb-8 text-center transform hover:scale-105 transition-transform cursor-pointer group"
+                            onclick="copyKRS()">
+                            <p class="text-sm uppercase tracking-wider mb-2 font-medium text-gray-400">Nasz numer KRS
+                            </p>
+                            <p class="text-4xl md:text-5xl font-black font-mono tracking-wider flex items-center justify-center gap-3 text-white"
+                                title="Kliknij, aby skopiować">
+                                0000086185
+                                <i data-lucide="copy"
+                                    class="w-6 h-6 opacity-50 group-hover:opacity-100 transition-opacity text-primary-light"></i>
+                            </p>
+                            <p id="copy-msg"
+                                class="text-primary-light text-sm mt-2 h-5 opacity-0 transition-opacity font-bold">
+                                Skopiowano do schowka!</p>
+                        </div>
+                    </div>
+
+                    <div class="lg:col-span-3 p-10 lg:p-12">
+                        <h3 class="text-2xl font-bold text-gray-900 mb-4">Dlaczego warto nas wesprzeć?</h3>
+                        <p class="text-gray-600 mb-6 leading-relaxed">
+                            Tworzenie wspólnoty to praca i wielkie błogosławieństwo. Od Państwa decyzji zależy
+                            utrzymanie i dalszy rozwój działalności Stowarzyszenia. Dziękujemy za zaufanie, którym
+                            obdarzacie nas od lat!
+                        </p>
+                        <h4 class="text-lg font-bold text-gray-900 mb-4">Programy do darmowych rozliczeń PIT:</h4>
+                        <div class="grid grid-cols-1 md:grid-cols-3 gap-4 mb-6">
+                            <div
+                                class="border border-gray-200 rounded-xl p-4 hover:border-primary hover:shadow-md transition-all bg-white">
+                                <h5 class="font-bold text-gray-900 mb-1 flex items-center gap-2"><i
+                                        data-lucide="monitor" class="w-4 h-4 text-primary"></i>Twój e-PIT</h5>
+                                <p class="text-xs text-gray-500">Portal Ministerstwa Finansów</p>
+                            </div>
+                            <div
+                                class="border border-gray-200 rounded-xl p-4 hover:border-primary hover:shadow-md transition-all bg-white">
+                                <h5 class="font-bold text-gray-900 mb-1 flex items-center gap-2"><i
+                                        data-lucide="calculator" class="w-4 h-4 text-primary"></i>PITax</h5>
+                                <p class="text-xs text-gray-500">Rozliczenie e-PIT z ulgami</p>
+                            </div>
+                            <div
+                                class="border border-gray-200 rounded-xl p-4 hover:border-primary hover:shadow-md transition-all bg-white">
+                                <h5 class="font-bold text-gray-900 mb-1 flex items-center gap-2"><i
+                                        data-lucide="file-text" class="w-4 h-4 text-primary"></i>e-pity</h5>
+                                <p class="text-xs text-gray-500">Wygodne e-pity online</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="darowizny" class="py-20 bg-white">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="grid grid-cols-1 lg:grid-cols-2 gap-16 items-center">
+                <div class="order-2 lg:order-1">
+                    <div
+                        class="bg-gray-50 p-8 md:p-10 rounded-3xl border border-gray-100 shadow-xl relative overflow-hidden">
+                        <div class="absolute top-0 right-0 w-40 h-40 bg-primary/5 rounded-bl-full -z-0"></div>
+                        <h3 class="text-2xl font-bold text-gray-900 mb-6 relative z-10">Konto Główne Stowarzyszenia</h3>
+
+                        <div class="space-y-6 relative z-10">
+                            <div>
+                                <p class="text-sm text-gray-500 uppercase tracking-wide font-medium mb-1">Odbiorca</p>
+                                <p class="text-lg font-semibold text-gray-900">Stowarzyszenie Przyjaciół D.A. „Wawrzyny”
+                                </p>
+                            </div>
+
+                            <div class="p-5 bg-white rounded-xl border border-primary/20 shadow-sm">
+                                <p class="text-sm text-primary uppercase tracking-wide font-bold mb-2">Santander Bank
+                                </p>
+                                <p
+                                    class="text-xl md:text-2xl font-mono font-bold text-gray-900 tracking-tight break-all">
+                                    13 1500 1793 1217 9004 2633 0000
+                                </p>
+                            </div>
+
+                            <div>
+                                <p class="text-sm text-gray-500 uppercase tracking-wide font-medium mb-1">Tytuł przelewu
+                                </p>
+                                <p class="text-gray-900 font-medium bg-gray-200 inline-block px-3 py-1 rounded">
+                                    Darowizna na cele statutowe stowarzyszenia</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="order-1 lg:order-2">
+                    <h2 class="text-3xl font-bold text-gray-900 mb-6 flex items-center gap-3">
+                        <i data-lucide="heart" class="w-8 h-8 text-primary"></i>
+                        Darowizna
+                    </h2>
+                    <p class="text-lg text-gray-600 mb-6 leading-relaxed">
+                        Zwracamy się z prośbą o pomoc materialną. Każda chwila jest szansą na lepszą zmianę naszego
+                        jutra! Darowizny można przekazywać przez cały rok.
+                    </p>
+                    <div class="flex gap-4 items-start bg-blue-50 p-5 rounded-xl border border-blue-100 mb-8">
+                        <i data-lucide="info" class="w-6 h-6 text-blue-600 flex-shrink-0 mt-0.5"></i>
+                        <p class="text-sm text-blue-900">
+                            <strong>Ważne:</strong> Osoby fizyczne mogą dokonać odliczenia od dochodu w wysokości
+                            dokonanej darowizny, nie więcej jednak niż 6% dochodu w roku podatkowym.
+                        </p>
+                    </div>
+                    <p class="mt-8 font-bold text-primary text-xl italic">
+                        Wszystkim, którzy zechcą odpowiedzieć na naszą prośbę – serdecznie dziękujemy!
+                    </p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="korespondencja" class="py-16 bg-yellow-50 border-y border-yellow-200">
+        <div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
+            <div
+                class="w-16 h-16 bg-yellow-100 text-yellow-600 rounded-full flex items-center justify-center mx-auto mb-6">
+                <i data-lucide="mail-open" class="w-8 h-8"></i>
+            </div>
+            <h2 class="text-3xl font-bold text-gray-900 mb-6">Ważne: Przejdźmy na e-mail</h2>
+            <p class="text-lg text-gray-700 mb-8">
+                Ze względu na rosnące koszty tradycyjnej korespondencji pocztowej, zwracamy się z ogromną prośbą o
+                wyrażenie zgody na otrzymywanie informacji od Stowarzyszenia drogą elektroniczną.
+            </p>
+            <div class="bg-white p-6 rounded-2xl shadow-sm border border-yellow-100 inline-block text-left">
+                <p class="font-bold text-gray-900 mb-2">Jak wyrazić zgodę?</p>
+                <p class="text-gray-600 text-sm mb-4">Wyślij krótką wiadomość ze swojego adresu na nasz e-mail. To dla
+                    nas sygnał, że możemy się z Tobą kontaktować cyfrowo.</p>
+                <a href="mailto:stowarzyszenie@wawrzyny.wroc.pl?subject=Zgoda%20na%20korespondencj%C4%99%20e-mail"
+                    class="bg-yellow-500 hover:bg-yellow-600 text-white px-6 py-3 rounded-xl font-bold transition-colors inline-flex items-center gap-2 w-full justify-center shadow-md">
+                    <i data-lucide="send" class="w-5 h-5"></i> stowarzyszenie@wawrzyny.wroc.pl
+                </a>
+            </div>
+        </div>
+    </section>
+
+    <footer id="kontakt" class="bg-gray-900 text-white pt-16 pb-8 border-t-4 border-primary mt-auto">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-12 mb-12">
+
+                <div class="lg:col-span-1">
+                    <a href="#" class="flex items-center gap-3 mb-6">
+                        <div class="w-10 h-10 bg-primary rounded-lg flex items-center justify-center text-white">
+                            <i data-lucide="church" class="w-6 h-6"></i>
+                        </div>
+                        <span class="font-bold text-lg leading-tight text-white">
+                            Stowarzyszenie<br><span class="text-primary-light text-sm">Wawrzyny</span>
+                        </span>
+                    </a>
+                    <p class="text-gray-400 text-sm mb-4">OPP wspierająca DA Wawrzyny i pielęgnująca pamięć o ks.
+                        Orzechu.</p>
+                    <div class="flex items-center gap-4 text-gray-400">
+                        <a href="https://www.facebook.com/SPDAWawrzyny" target="_blank"
+                            class="hover:text-primary transition-colors" title="Facebook Stowarzyszenia"><i
+                                data-lucide="facebook" class="w-5 h-5"></i></a>
+                        <a href="https://www.facebook.com/ks.orzech/" target="_blank"
+                            class="hover:text-primary transition-colors" title="Facebook ks. Orzecha"><i
+                                data-lucide="users" class="w-5 h-5"></i></a>
+                    </div>
+                </div>
+
+                <div>
+                    <h4 class="text-lg font-bold mb-6 border-b border-gray-700 pb-2">Dane Stowarzyszenia</h4>
+                    <ul class="space-y-4 text-gray-300 text-sm">
+                        <li class="flex items-start gap-3">
+                            <i data-lucide="map-pin" class="w-5 h-5 text-primary flex-shrink-0 mt-0.5"></i>
+                            <span>ul. Bujwida 49/51<br>50-345 Wrocław</span>
+                        </li>
+                        <li class="flex items-center gap-3"><i data-lucide="landmark"
+                                class="w-5 h-5 text-primary"></i>KRS: 0000086185</li>
+                    </ul>
+                </div>
+
+                <div>
+                    <h4 class="text-lg font-bold mb-6 border-b border-gray-700 pb-2">Konta Bankowe</h4>
+                    <ul class="space-y-4 text-gray-300 text-sm">
+                        <li>
+                            <p class="text-gray-400 text-xs mb-1">GŁÓWNE (Darowizny):</p>
+                            <p class="font-mono text-xs bg-gray-800 p-1.5 rounded tracking-wider">13 1500 1793 1217 9004
+                                2633 0000</p>
+                        </li>
+                        <li>
+                            <p class="text-gray-400 text-xs mb-1">FILM "DEKALOG ORZECHA":</p>
+                            <p class="font-mono text-xs bg-gray-800 p-1.5 rounded tracking-wider text-primary-light">93
+                                1090 2590 0000 0001 3239 1489</p>
+                        </li>
+                    </ul>
+                </div>
+
+                <div>
+                    <h4 class="text-lg font-bold mb-6 border-b border-gray-700 pb-2">Kontakt</h4>
+                    <ul class="space-y-3 text-gray-300 text-sm">
+                        <li>
+                            <p class="font-medium text-white">Wiesław „Kuzyn” Wowk</p>
+                            <p class="text-gray-400 text-xs mb-1">Przewodniczący</p>
+                            <a href="tel:+48608095757" class="hover:text-white flex items-center gap-2"><i
+                                    data-lucide="phone" class="w-3 h-3 text-primary"></i> 608 09 57 57</a>
+                        </li>
+                        <li class="pt-2">
+                            <a href="mailto:stowarzyszenie@wawrzyny.wroc.pl"
+                                class="hover:text-white flex items-center gap-2"><i data-lucide="mail"
+                                    class="w-4 h-4 text-primary"></i> stowarzyszenie@wawrzyny.wroc.pl</a>
+                        </li>
+                        <li>
+                            <a href="https://orzech.wroc.pl" target="_blank"
+                                class="hover:text-white flex items-center gap-2"><i data-lucide="globe"
+                                    class="w-4 h-4 text-primary"></i> www.orzech.wroc.pl</a>
+                        </li>
+                    </ul>
+                </div>
+
+            </div>
+
+            <div
+                class="border-t border-gray-800 pt-8 flex flex-col md:flex-row justify-between items-center gap-4 text-sm text-gray-500">
+                <p>&copy; Stowarzyszenie Przyjaciół D.A. Wawrzyny 2026</p>
+            </div>
+        </div>
+    </footer>
+
+    <script>
+        lucide.createIcons();
+
+        function copyKRS() {
+            const krs = "0000086185";
+            navigator.clipboard.writeText(krs).then(() => {
+                const msg = document.getElementById('copy-msg');
+                msg.classList.remove('opacity-0');
+                setTimeout(() => msg.classList.add('opacity-0'), 2000);
+            }).catch(err => {
+                const textArea = document.createElement("textarea");
+                textArea.value = krs;
+                document.body.appendChild(textArea);
+                textArea.select();
+                try {
+                    document.execCommand('copy');
+                    const msg = document.getElementById('copy-msg');
+                    msg.classList.remove('opacity-0');
+                    setTimeout(() => msg.classList.add('opacity-0'), 2000);
+                } catch (err) {
+                    console.error('Błąd kopiowania', err);
+                }
+                document.body.removeChild(textArea);
+            });
+        }
+
+        const mobileBtn = document.getElementById('mobile-menu-btn');
+        const mobileMenu = document.getElementById('mobile-menu');
+        const mobileLinks = document.querySelectorAll('.mobile-link');
+
+        mobileBtn.addEventListener('click', () => mobileMenu.classList.toggle('hidden'));
+        mobileLinks.forEach(link => link.addEventListener('click', () => mobileMenu.classList.add('hidden')));
+
+        const nav = document.querySelector('nav');
+        window.addEventListener('scroll', () => {
+            if (window.scrollY > 10) {
+                nav.classList.add('shadow-md', 'border-gray-200');
+                nav.classList.remove('border-transparent');
+            } else {
+                nav.classList.remove('shadow-md', 'border-gray-200');
+                nav.classList.add('border-transparent');
+            }
+        });
+    </script>
+</body>
+
+</html>
