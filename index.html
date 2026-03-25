@@ -258,8 +258,8 @@
                     <a href="#o-nas" class="text-gray-600 hover:text-primary font-medium transition-colors">O nas</a>
                     <a href="#dzialalnosc"
                         class="text-gray-600 hover:text-primary font-medium transition-colors">Działalność</a>
-                    <a href="#wydarzenia"
-                        class="text-gray-600 hover:text-primary font-medium transition-colors">Wydarzenia 2025</a>
+                    <a href="#kalendarium"
+                        class="text-gray-600 hover:text-primary font-medium transition-colors">Kalendarium 2026</a>
                     <a href="#podatek" class="text-gray-600 hover:text-primary font-medium transition-colors">1.5%
                         Podatku</a>
                     <a href="#darowizny"
@@ -285,9 +285,8 @@
                     nas</a>
                 <a href="#dzialalnosc"
                     class="block px-3 py-3 text-base font-medium text-gray-700 hover:text-primary hover:bg-gray-50 rounded-md mobile-link">Działalność</a>
-                <a href="#wydarzenia"
-                    class="block px-3 py-3 text-base font-medium text-gray-700 hover:text-primary hover:bg-gray-50 rounded-md mobile-link">Wydarzenia
-                    2025</a>
+                <a href="#kalendarium"
+                    class="block px-3 py-3 text-base font-medium text-gray-700 hover:text-primary hover:bg-gray-50 rounded-md mobile-link">Kalendarium 2026</a>
                 <a href="#podatek"
                     class="block px-3 py-3 text-base font-medium text-gray-700 hover:text-primary hover:bg-gray-50 rounded-md mobile-link">1.5%
                     Podatku</a>
@@ -461,6 +460,9 @@
             </div>
         </div>
     </section>
+
+    <!-- Nowa sekcja: Kalendarium 2026 (ładowana dynamicznie) -->
+    <section id="kalendarium" class="py-20 bg-white overflow-hidden scroll-mt-20"></section>
 
     <!-- Film Orzech -->
     <section class="py-20 bg-gray-900 text-white relative overflow-hidden">
@@ -864,6 +866,17 @@
                         lucide.createIcons();
                         // Po załadowaniu wydarzeń przebuduj galerię (jeśli tam są nowe elementy)
                         buildGallery();
+                    }
+                });
+
+            // Wczytaj Kalendarium 2026
+            fetch('kalendarium_2026.html')
+                .then(res => res.text())
+                .then(html => {
+                    const target = document.getElementById('kalendarium');
+                    if (target) {
+                        target.innerHTML = html;
+                        lucide.createIcons();
                     }
                 });
         }
