@@ -32,46 +32,7 @@
 
     <script src="https://unpkg.com/lucide@latest"></script>
 
-    <style>
-        .glass-nav {
-            background: rgba(255, 255, 255, 0.95);
-            backdrop-filter: blur(10px);
-        }
-
-        .hero-pattern {
-            background-color: #367664;
-            background-image: linear-gradient(135deg, #265447 0%, #367664 100%);
-        }
-
-        .list-grid {
-            display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
-            gap: 1rem;
-        }
-
-        .gallery-grid {
-            display: grid;
-            grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
-            gap: 1.5rem;
-        }
-
-        .gallery-item {
-            aspect-ratio: 4/3;
-            overflow: hidden;
-            border-radius: 0.75rem;
-        }
-
-        .gallery-item img {
-            width: 100%;
-            height: 100%;
-            object-fit: cover;
-            transition: transform 0.3s ease;
-        }
-
-        .gallery-item:hover img {
-            transform: scale(1.05);
-        }
-    </style>
+    <link rel="stylesheet" href="style.css">
 </head>
 
 <body class="font-sans text-gray-800 antialiased bg-gray-50 flex flex-col min-h-screen">
@@ -686,66 +647,7 @@
         </div>
     </footer>
 
-    <script>
-        lucide.createIcons();
-
-        // Dynamiczne ładowanie sekcji Kalendarium
-        function loadKalendarium() {
-            fetch('kalendarium_2026.html')
-                .then(res => res.text())
-                .then(html => {
-                    const target = document.getElementById('kalendarium');
-                    if (target) {
-                        target.innerHTML = html;
-                        lucide.createIcons();
-                    }
-                })
-                .catch(err => console.error('Błąd ładowania kalendarium:', err));
-        }
-
-        loadKalendarium();
-
-        function copyKRS() {
-            const krs = "0000086185";
-            navigator.clipboard.writeText(krs).then(() => {
-                const msg = document.getElementById('copy-msg');
-                msg.classList.remove('opacity-0');
-                setTimeout(() => msg.classList.add('opacity-0'), 2000);
-            }).catch(err => {
-                const textArea = document.createElement("textarea");
-                textArea.value = krs;
-                document.body.appendChild(textArea);
-                textArea.select();
-                try {
-                    document.execCommand('copy');
-                    const msg = document.getElementById('copy-msg');
-                    msg.classList.remove('opacity-0');
-                    setTimeout(() => msg.classList.add('opacity-0'), 2000);
-                } catch (err) {
-                    console.error('Błąd kopiowania', err);
-                }
-                document.body.removeChild(textArea);
-            });
-        }
-
-        const mobileBtn = document.getElementById('mobile-menu-btn');
-        const mobileMenu = document.getElementById('mobile-menu');
-        const mobileLinks = document.querySelectorAll('.mobile-link');
-
-        mobileBtn.addEventListener('click', () => mobileMenu.classList.toggle('hidden'));
-        mobileLinks.forEach(link => link.addEventListener('click', () => mobileMenu.classList.add('hidden')));
-
-        const nav = document.querySelector('nav');
-        window.addEventListener('scroll', () => {
-            if (window.scrollY > 10) {
-                nav.classList.add('shadow-md', 'border-gray-200');
-                nav.classList.remove('border-transparent');
-            } else {
-                nav.classList.remove('shadow-md', 'border-gray-200');
-                nav.classList.add('border-transparent');
-            }
-        });
-    </script>
+    <script src="scripts.js"></script>
 </body>
 
 </html>
