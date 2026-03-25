@@ -1,15 +1,16 @@
 <!DOCTYPE html>
 <html lang="pl" class="scroll-smooth">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Stowarzyszenie Przyjaciół Duszpasterstwa Akademickiego Wawrzyny</title>
-    
+
     <!-- Google Fonts -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
-    
+
     <!-- Tailwind CSS -->
     <script src="https://cdn.tailwindcss.com"></script>
     <script>
@@ -35,12 +36,17 @@
     <script src="https://unpkg.com/lucide@latest"></script>
 
     <style>
+        /* Prevent horizontal overflow on all screen sizes */
+        html, body {
+            overflow-x: hidden;
+        }
+
         /* Custom Styles for enhancements */
         .glass-nav {
             background: rgba(255, 255, 255, 0.95);
             backdrop-filter: blur(10px);
         }
-        
+
         .hero-pattern {
             background-color: #367664;
             background-image: linear-gradient(135deg, #265447 0%, #367664 100%);
@@ -76,6 +82,7 @@
         }
     </style>
 </head>
+
 <body class="font-sans text-gray-800 antialiased bg-gray-50 flex flex-col min-h-screen">
 
     <!-- Navigation -->
@@ -84,7 +91,8 @@
             <div class="flex justify-between h-20">
                 <div class="flex items-center">
                     <a href="#" class="flex items-center gap-3 group">
-                        <div class="w-10 h-10 bg-primary rounded-lg flex items-center justify-center text-white group-hover:bg-primary-dark transition-colors">
+                        <div
+                            class="w-10 h-10 bg-primary rounded-lg flex items-center justify-center text-white group-hover:bg-primary-dark transition-colors">
                             <i data-lucide="church" class="w-6 h-6"></i>
                         </div>
                         <span class="font-bold text-lg leading-tight text-gray-900 hidden sm:block">
@@ -92,15 +100,20 @@
                         </span>
                     </a>
                 </div>
-                
+
                 <!-- Desktop Menu -->
                 <div class="hidden md:flex items-center space-x-8">
                     <a href="#o-nas" class="text-gray-600 hover:text-primary font-medium transition-colors">O nas</a>
-                    <a href="#dzialalnosc" class="text-gray-600 hover:text-primary font-medium transition-colors">Działalność</a>
-                    <a href="#wydarzenia" class="text-gray-600 hover:text-primary font-medium transition-colors">Wydarzenia 2025</a>
-                    <a href="#podatek" class="text-gray-600 hover:text-primary font-medium transition-colors">1.5% Podatku</a>
-                    <a href="#darowizny" class="text-gray-600 hover:text-primary font-medium transition-colors">Darowizny</a>
-                    <a href="#kontakt" class="bg-primary text-white px-5 py-2 rounded-full font-medium hover:bg-primary-dark transition-colors shadow-md shadow-primary/30">Kontakt</a>
+                    <a href="#dzialalnosc"
+                        class="text-gray-600 hover:text-primary font-medium transition-colors">Działalność</a>
+                    <a href="#wydarzenia"
+                        class="text-gray-600 hover:text-primary font-medium transition-colors">Wydarzenia 2025</a>
+                    <a href="#podatek" class="text-gray-600 hover:text-primary font-medium transition-colors">1.5%
+                        Podatku</a>
+                    <a href="#darowizny"
+                        class="text-gray-600 hover:text-primary font-medium transition-colors">Darowizny</a>
+                    <a href="#kontakt"
+                        class="bg-primary text-white px-5 py-2 rounded-full font-medium hover:bg-primary-dark transition-colors shadow-md shadow-primary/30">Kontakt</a>
                 </div>
 
                 <!-- Mobile menu button -->
@@ -115,12 +128,21 @@
         <!-- Mobile Menu -->
         <div id="mobile-menu" class="hidden md:hidden bg-white border-t border-gray-100 shadow-lg absolute w-full">
             <div class="px-4 pt-2 pb-6 space-y-1">
-                <a href="#o-nas" class="block px-3 py-3 text-base font-medium text-gray-700 hover:text-primary hover:bg-gray-50 rounded-md mobile-link">O nas</a>
-                <a href="#dzialalnosc" class="block px-3 py-3 text-base font-medium text-gray-700 hover:text-primary hover:bg-gray-50 rounded-md mobile-link">Działalność</a>
-                <a href="#wydarzenia" class="block px-3 py-3 text-base font-medium text-gray-700 hover:text-primary hover:bg-gray-50 rounded-md mobile-link">Wydarzenia 2025</a>
-                <a href="#podatek" class="block px-3 py-3 text-base font-medium text-gray-700 hover:text-primary hover:bg-gray-50 rounded-md mobile-link">1.5% Podatku</a>
-                <a href="#darowizny" class="block px-3 py-3 text-base font-medium text-gray-700 hover:text-primary hover:bg-gray-50 rounded-md mobile-link">Darowizny</a>
-                <a href="#kontakt" class="block px-3 py-3 text-base font-medium text-primary bg-primary/10 rounded-md mobile-link">Kontakt</a>
+                <a href="#o-nas"
+                    class="block px-3 py-3 text-base font-medium text-gray-700 hover:text-primary hover:bg-gray-50 rounded-md mobile-link">O
+                    nas</a>
+                <a href="#dzialalnosc"
+                    class="block px-3 py-3 text-base font-medium text-gray-700 hover:text-primary hover:bg-gray-50 rounded-md mobile-link">Działalność</a>
+                <a href="#wydarzenia"
+                    class="block px-3 py-3 text-base font-medium text-gray-700 hover:text-primary hover:bg-gray-50 rounded-md mobile-link">Wydarzenia
+                    2025</a>
+                <a href="#podatek"
+                    class="block px-3 py-3 text-base font-medium text-gray-700 hover:text-primary hover:bg-gray-50 rounded-md mobile-link">1.5%
+                    Podatku</a>
+                <a href="#darowizny"
+                    class="block px-3 py-3 text-base font-medium text-gray-700 hover:text-primary hover:bg-gray-50 rounded-md mobile-link">Darowizny</a>
+                <a href="#kontakt"
+                    class="block px-3 py-3 text-base font-medium text-primary bg-primary/10 rounded-md mobile-link">Kontakt</a>
             </div>
         </div>
     </nav>
@@ -128,7 +150,8 @@
     <!-- Hero Section -->
     <header class="pt-28 pb-16 md:pt-40 md:pb-24 hero-pattern text-white">
         <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
-            <div class="inline-flex items-center gap-2 px-4 py-2 rounded-full bg-white/20 backdrop-blur-sm text-sm font-medium mb-8 border border-white/30">
+            <div
+                class="inline-flex items-center gap-2 px-4 py-2 rounded-full bg-white/20 backdrop-blur-sm text-sm font-medium mb-8 border border-white/30">
                 <i data-lucide="heart-handshake" class="w-4 h-4"></i>
                 Organizacja Pożytku Publicznego (OPP)
             </div>
@@ -140,11 +163,13 @@
                 Duszpasterski Parasol Bezpieczeństwa. Wspieramy wspólnotę, budujemy więzi, pomagamy od 1995 roku.
             </p>
             <div class="flex flex-col sm:flex-row justify-center gap-4">
-                <a href="#podatek" class="bg-white text-primary px-8 py-3.5 rounded-full font-bold text-lg hover:bg-gray-100 transition-colors shadow-lg flex items-center justify-center gap-2">
+                <a href="#podatek"
+                    class="bg-white text-primary px-8 py-3.5 rounded-full font-bold text-lg hover:bg-gray-100 transition-colors shadow-lg flex items-center justify-center gap-2">
                     <i data-lucide="percent" class="w-5 h-5"></i>
                     Przekaż 1,5%
                 </a>
-                <a href="#darowizny" class="bg-transparent border-2 border-white text-white px-8 py-3.5 rounded-full font-bold text-lg hover:bg-white/10 transition-colors flex items-center justify-center gap-2">
+                <a href="#darowizny"
+                    class="bg-transparent border-2 border-white text-white px-8 py-3.5 rounded-full font-bold text-lg hover:bg-white/10 transition-colors flex items-center justify-center gap-2">
                     <i data-lucide="wallet" class="w-5 h-5"></i>
                     Wesprzyj Darowizną
                 </a>
@@ -163,25 +188,31 @@
                     </h2>
                     <div class="prose prose-lg text-gray-600 space-y-4">
                         <p>
-                            Pod tym pojęciem kryje się <strong>Stowarzyszenie Przyjaciół Duszpasterstwa Akademickiego „Wawrzyny”</strong>. A skąd wzięło się to określenie?
+                            Pod tym pojęciem kryje się <strong>Stowarzyszenie Przyjaciół Duszpasterstwa Akademickiego
+                                „Wawrzyny”</strong>. A skąd wzięło się to określenie?
                         </p>
                         <p>
-                            „Orzech” (ks. Stanisław Orzechowski) w udzielonym kiedyś wywiadzie powiedział, że dzięki Stowarzyszeniu nasze duszpasterstwo może mieć gwarancję niezależności i wsparcia finansowego.
+                            „Orzech” (ks. Stanisław Orzechowski) w udzielonym kiedyś wywiadzie powiedział, że dzięki
+                            Stowarzyszeniu nasze duszpasterstwo może mieć gwarancję niezależności i wsparcia
+                            finansowego.
                         </p>
                         <div class="bg-primary/5 border-l-4 border-primary p-6 rounded-r-lg my-6">
                             <p class="text-gray-800 italic font-medium">
-                                Nasze duszpasterstwo istnieje już przeszło 50 lat i zawsze polegało na pomocy przyjaciół i darczyńców, którzy w ten sposób uczestniczą w życiu duszpasterstwa.
+                                Nasze duszpasterstwo istnieje już przeszło 50 lat i zawsze polegało na pomocy przyjaciół
+                                i darczyńców, którzy w ten sposób uczestniczą w życiu duszpasterstwa.
                             </p>
                         </div>
                         <p>
-                            Stowarzyszenie powstało głównie z myślą aby wspierać działalność Duszpasterstwa. Jesteśmy dumni z tego, że od 1995 roku możemy służyć pomocą i rozwijać to wyjątkowe miejsce.
+                            Stowarzyszenie powstało głównie z myślą aby wspierać działalność Duszpasterstwa. Jesteśmy
+                            dumni z tego, że od 1995 roku możemy służyć pomocą i rozwijać to wyjątkowe miejsce.
                         </p>
                     </div>
                 </div>
                 <div class="relative">
                     <div class="aspect-[4/3] rounded-2xl overflow-hidden shadow-2xl relative">
                         <!-- Użyto placeholdera zdjęcia z Unsplash ze słowami kluczowymi -->
-                        <img src="https://images.unsplash.com/photo-1529070538774-1843cb3265df?ixlib=rb-4.0.3&auto=format&fit=crop&w=1000&q=80" alt="Wspólnota akademicka" class="w-full h-full object-cover">
+                        <img src="https://images.unsplash.com/photo-1529070538774-1843cb3265df?ixlib=rb-4.0.3&auto=format&fit=crop&w=1000&q=80"
+                            alt="Wspólnota akademicka" class="w-full h-full object-cover">
                         <div class="absolute inset-0 bg-gradient-to-t from-black/60 to-transparent flex items-end p-8">
                             <p class="text-white text-xl font-medium">Tworzymy wspólnotę, wspieramy rozwój.</p>
                         </div>
@@ -199,21 +230,26 @@
         <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
             <div class="bg-white rounded-3xl shadow-xl overflow-hidden">
                 <div class="grid grid-cols-1 lg:grid-cols-5">
-                    
+
                     <!-- Lewa strona - KRS -->
                     <div class="lg:col-span-2 bg-primary text-white p-10 flex flex-col justify-center">
                         <h2 class="text-3xl md:text-4xl font-bold mb-4">Z 1,5% WIELE DOBRA!</h2>
                         <p class="text-green-50 text-lg mb-8 opacity-90">
-                            Przed nami czas rozliczeń i decyzji jakiej organizacji przekażemy 1,5% podatku. Prosimy o Twoje wsparcie.
+                            Przed nami czas rozliczeń i decyzji jakiej organizacji przekażemy 1,5% podatku. Prosimy o
+                            Twoje wsparcie.
                         </p>
-                        
-                        <div class="bg-white/10 rounded-2xl p-6 border border-white/20 backdrop-blur-sm mb-8 text-center transform hover:scale-105 transition-transform">
+
+                        <div
+                            class="bg-white/10 rounded-2xl p-6 border border-white/20 backdrop-blur-sm mb-8 text-center transform hover:scale-105 transition-transform">
                             <p class="text-sm uppercase tracking-wider mb-2 font-medium opacity-80">Nasz numer KRS</p>
-                            <p class="text-4xl md:text-5xl font-black font-mono tracking-wider flex items-center justify-center gap-3 cursor-pointer group" onclick="copyKRS()" title="Kliknij, aby skopiować">
+                            <p class="text-4xl md:text-5xl font-black font-mono tracking-wider flex items-center justify-center gap-3 cursor-pointer group"
+                                onclick="copyKRS()" title="Kliknij, aby skopiować">
                                 0000086185
-                                <i data-lucide="copy" class="w-6 h-6 opacity-50 group-hover:opacity-100 transition-opacity"></i>
+                                <i data-lucide="copy"
+                                    class="w-6 h-6 opacity-50 group-hover:opacity-100 transition-opacity"></i>
                             </p>
-                            <p id="copy-msg" class="text-green-300 text-sm mt-2 h-5 opacity-0 transition-opacity">Skopiowano do schowka!</p>
+                            <p id="copy-msg" class="text-green-300 text-sm mt-2 h-5 opacity-0 transition-opacity">
+                                Skopiowano do schowka!</p>
                         </div>
 
                         <div class="space-y-4 text-sm opacity-90">
@@ -236,52 +272,74 @@
                     <div class="lg:col-span-3 p-10 lg:p-12">
                         <h3 class="text-2xl font-bold text-gray-900 mb-4">Przyjaciele, Sympatycy, Drogie Wawrzyny!</h3>
                         <p class="text-gray-600 mb-6 leading-relaxed">
-                            Tworzenie wspólnoty to jednocześnie praca i obowiązek, ale zarazem wielkie błogosławieństwo. To czas, który kształtuje i przygotowuje człowieka na resztę dorosłego życia. Dostrzeżenie daru, jakim jest Duszpasterstwo oraz umiejętność podziękowania za to, czego w nim doświadczyliśmy, jest wyrazem dojrzałości oraz wdzięczności.
+                            Tworzenie wspólnoty to jednocześnie praca i obowiązek, ale zarazem wielkie błogosławieństwo.
+                            To czas, który kształtuje i przygotowuje człowieka na resztę dorosłego życia. Dostrzeżenie
+                            daru, jakim jest Duszpasterstwo oraz umiejętność podziękowania za to, czego w nim
+                            doświadczyliśmy, jest wyrazem dojrzałości oraz wdzięczności.
                         </p>
                         <p class="text-gray-600 mb-8 font-medium">
-                            I tak jak nigdy nie przestaje się być członkiem wspólnoty, tak nigdy nie przestaje się być za nią odpowiedzialnym. Dziękujemy za pomoc, którą otrzymaliśmy do tej pory!
+                            I tak jak nigdy nie przestaje się być członkiem wspólnoty, tak nigdy nie przestaje się być
+                            za nią odpowiedzialnym. Dziękujemy za pomoc, którą otrzymaliśmy do tej pory!
                         </p>
 
                         <h4 class="text-xl font-bold text-gray-900 mb-4 flex items-center gap-2">
                             <i data-lucide="gift" class="w-5 h-5 text-primary"></i>
                             Dzięki Waszym wpłatom wsparliśmy:
                         </h4>
-                        <div class="bg-gray-50 rounded-xl p-5 border border-gray-100 mb-8 text-sm text-gray-600 list-grid">
+                        <div
+                            class="bg-gray-50 rounded-xl p-5 border border-gray-100 mb-8 text-sm text-gray-600 list-grid">
                             <ul class="space-y-2">
-                                <li class="flex items-center gap-2"><i data-lucide="dot" class="text-primary"></i>lekcje religii i wykłady patriotyczne</li>
-                                <li class="flex items-center gap-2"><i data-lucide="dot" class="text-primary"></i>spotkania odnowy w Duchu Św.</li>
-                                <li class="flex items-center gap-2"><i data-lucide="dot" class="text-primary"></i>warsztaty muzyczne</li>
-                                <li class="flex items-center gap-2"><i data-lucide="dot" class="text-primary"></i>wyjazdy studenckie i adaptacyjne</li>
+                                <li class="flex items-center gap-2"><i data-lucide="dot" class="text-primary"></i>lekcje
+                                    religii i wykłady patriotyczne</li>
+                                <li class="flex items-center gap-2"><i data-lucide="dot"
+                                        class="text-primary"></i>spotkania odnowy w Duchu Św.</li>
+                                <li class="flex items-center gap-2"><i data-lucide="dot"
+                                        class="text-primary"></i>warsztaty muzyczne</li>
+                                <li class="flex items-center gap-2"><i data-lucide="dot"
+                                        class="text-primary"></i>wyjazdy studenckie i adaptacyjne</li>
                             </ul>
                             <ul class="space-y-2">
-                                <li class="flex items-center gap-2"><i data-lucide="dot" class="text-primary"></i>artykuły spożywcze (śniadania, wieczerze)</li>
-                                <li class="flex items-center gap-2"><i data-lucide="dot" class="text-primary"></i>rekolekcje Wielkopostne i Adwentowe</li>
-                                <li class="flex items-center gap-2"><i data-lucide="dot" class="text-primary"></i>zakup art. liturgicznych i sanitarnych</li>
-                                <li class="flex items-center gap-2"><i data-lucide="dot" class="text-primary"></i>utrzymanie ośrodka (węgiel, sprzęt)</li>
+                                <li class="flex items-center gap-2"><i data-lucide="dot"
+                                        class="text-primary"></i>artykuły spożywcze (śniadania, wieczerze)</li>
+                                <li class="flex items-center gap-2"><i data-lucide="dot"
+                                        class="text-primary"></i>rekolekcje Wielkopostne i Adwentowe</li>
+                                <li class="flex items-center gap-2"><i data-lucide="dot" class="text-primary"></i>zakup
+                                    art. liturgicznych i sanitarnych</li>
+                                <li class="flex items-center gap-2"><i data-lucide="dot"
+                                        class="text-primary"></i>utrzymanie ośrodka (węgiel, sprzęt)</li>
                             </ul>
                         </div>
 
                         <h4 class="text-lg font-bold text-gray-900 mb-4">Programy do darmowych rozliczeń PIT:</h4>
                         <div class="grid grid-cols-1 md:grid-cols-3 gap-4">
                             <!-- Card 1 -->
-                            <a href="https://www.podatki.gov.pl/" target="_blank" class="border border-gray-200 rounded-xl p-4 hover:border-primary hover:shadow-md transition-all block group">
-                                <h5 class="font-bold text-gray-900 mb-1 flex items-center gap-2 group-hover:text-primary transition-colors">
+                            <a href="https://www.podatki.gov.pl/" target="_blank"
+                                class="border border-gray-200 rounded-xl p-4 hover:border-primary hover:shadow-md transition-all block group">
+                                <h5
+                                    class="font-bold text-gray-900 mb-1 flex items-center gap-2 group-hover:text-primary transition-colors">
                                     <i data-lucide="monitor" class="w-4 h-4 text-primary"></i>
                                     Twój e-PIT
                                 </h5>
-                                <p class="text-xs text-gray-500">Oficjalny portal przygotowany przez Ministerstwo Finansów</p>
+                                <p class="text-xs text-gray-500">Oficjalny portal przygotowany przez Ministerstwo
+                                    Finansów</p>
                             </a>
                             <!-- Card 2 -->
-                            <a href="https://www.pitax.pl/rozliczenie-pit-online-0000086185/" target="_blank" class="border border-gray-200 rounded-xl p-4 hover:border-primary hover:shadow-md transition-all block group">
-                                <h5 class="font-bold text-gray-900 mb-1 flex items-center gap-2 group-hover:text-primary transition-colors">
+                            <a href="https://www.pitax.pl/rozliczenie-pit-online-0000086185/" target="_blank"
+                                class="border border-gray-200 rounded-xl p-4 hover:border-primary hover:shadow-md transition-all block group">
+                                <h5
+                                    class="font-bold text-gray-900 mb-1 flex items-center gap-2 group-hover:text-primary transition-colors">
                                     <i data-lucide="calculator" class="w-4 h-4 text-primary"></i>
                                     PITax
                                 </h5>
-                                <p class="text-xs text-gray-500">Darmowe Rozliczenie e-PIT z uwzględnieniem wszystkich ulg</p>
+                                <p class="text-xs text-gray-500">Darmowe Rozliczenie e-PIT z uwzględnieniem wszystkich
+                                    ulg</p>
                             </a>
                             <!-- Card 3 -->
-                            <a href="https://www.e-pity.pl/pity-2025/organizacja-pozytku-publicznego-2026-KRS-0000086185" target="_blank" class="border border-gray-200 rounded-xl p-4 hover:border-primary hover:shadow-md transition-all block group">
-                                <h5 class="font-bold text-gray-900 mb-1 flex items-center gap-2 group-hover:text-primary transition-colors">
+                            <a href="https://www.e-pity.pl/pity-2025/organizacja-pozytku-publicznego-2026-KRS-0000086185"
+                                target="_blank"
+                                class="border border-gray-200 rounded-xl p-4 hover:border-primary hover:shadow-md transition-all block group">
+                                <h5
+                                    class="font-bold text-gray-900 mb-1 flex items-center gap-2 group-hover:text-primary transition-colors">
                                     <i data-lucide="file-text" class="w-4 h-4 text-primary"></i>
                                     e-pity
                                 </h5>
@@ -299,21 +357,28 @@
     <section class="py-20 bg-gray-900 text-white relative overflow-hidden">
         <div class="absolute inset-0 opacity-20">
             <!-- Tło przypominające salę kinową/stare taśmy filmowe -->
-            <img src="https://images.unsplash.com/photo-1485005087593-1628d0ebafb3?auto=format&fit=crop&q=80" alt="Film background" class="w-full h-full object-cover">
+            <img src="https://images.unsplash.com/photo-1485005087593-1628d0ebafb3?auto=format&fit=crop&q=80"
+                alt="Film background" class="w-full h-full object-cover">
         </div>
         <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
             <div class="max-w-3xl mx-auto text-center">
-                <div class="w-16 h-16 bg-primary rounded-full flex items-center justify-center mx-auto mb-6 shadow-lg shadow-primary/40">
+                <div
+                    class="w-16 h-16 bg-primary rounded-full flex items-center justify-center mx-auto mb-6 shadow-lg shadow-primary/40">
                     <i data-lucide="film" class="w-8 h-8 text-white"></i>
                 </div>
                 <h2 class="text-3xl md:text-4xl font-bold mb-6">Film „Orzech – zawsze chciałem być z ludźmi”</h2>
                 <p class="text-gray-300 text-lg mb-8 leading-relaxed">
-                    Pierwszy pełnometrażowy dokument o życiu księdza Stanisława Orzechowskiego – kultowego, wrocławskiego duszpasterza akademickiego, kapelana „Solidarności” a także m.in. inicjatora i organizatora pieszych pielgrzymek na Jasną Górę.
+                    Pierwszy pełnometrażowy dokument o życiu księdza Stanisława Orzechowskiego – kultowego,
+                    wrocławskiego duszpasterza akademickiego, kapelana „Solidarności” a także m.in. inicjatora i
+                    organizatora pieszych pielgrzymek na Jasną Górę.
                 </p>
                 <p class="text-gray-400 mb-8">
-                    W filmie pojawiły się unikalne materiały archiwalne, świadectwa kilku pokoleń wychowanków „Orzecha”, fragmenty kazań. W roku 2020 film otrzymał główną nagrodę – <strong>Złoty Opornik</strong> dla filmu dokumentalnego festiwalu filmowego "Niepokorni Niezłomni Wyklęci" w Gdyni.
+                    W filmie pojawiły się unikalne materiały archiwalne, świadectwa kilku pokoleń wychowanków „Orzecha”,
+                    fragmenty kazań. W roku 2020 film otrzymał główną nagrodę – <strong>Złoty Opornik</strong> dla filmu
+                    dokumentalnego festiwalu filmowego "Niepokorni Niezłomni Wyklęci" w Gdyni.
                 </p>
-                <div class="inline-block border border-primary/50 bg-primary/20 px-6 py-3 rounded-lg text-primary-light font-medium">
+                <div
+                    class="inline-block border border-primary/50 bg-primary/20 px-6 py-3 rounded-lg text-primary-light font-medium">
                     Stowarzyszenie w dużym zakresie wsparło realizację tego dzieła.
                 </div>
             </div>
@@ -325,57 +390,67 @@
         <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
             <div class="grid grid-cols-1 lg:grid-cols-2 gap-16 items-center">
                 <div class="order-2 lg:order-1">
-                    <div class="bg-gray-50 p-8 md:p-10 rounded-3xl border border-gray-100 shadow-xl relative overflow-hidden">
+                    <div
+                        class="bg-gray-50 p-8 md:p-10 rounded-3xl border border-gray-100 shadow-xl relative overflow-hidden">
                         <div class="absolute top-0 right-0 w-40 h-40 bg-primary/5 rounded-bl-full -z-0"></div>
                         <h3 class="text-2xl font-bold text-gray-900 mb-6 relative z-10">Dane do przelewu</h3>
-                        
+
                         <div class="space-y-6 relative z-10">
                             <div>
                                 <p class="text-sm text-gray-500 uppercase tracking-wide font-medium mb-1">Odbiorca</p>
-                                <p class="text-lg font-semibold text-gray-900">Stowarzyszenie Przyjaciół Duszpasterstwa Akademickiego „Wawrzyny”</p>
+                                <p class="text-lg font-semibold text-gray-900">Stowarzyszenie Przyjaciół Duszpasterstwa
+                                    Akademickiego „Wawrzyny”</p>
                             </div>
-                            
+
                             <div>
                                 <p class="text-sm text-gray-500 uppercase tracking-wide font-medium mb-1">Adres</p>
                                 <p class="text-gray-900">ul. Bujwida 49/51<br>50-345 Wrocław</p>
                             </div>
 
                             <div class="p-5 bg-white rounded-xl border border-primary/20 shadow-sm">
-                                <p class="text-sm text-primary uppercase tracking-wide font-bold mb-2">Santander Bank</p>
-                                <p class="text-xl md:text-2xl font-mono font-bold text-gray-900 tracking-tight break-all">
+                                <p class="text-sm text-primary uppercase tracking-wide font-bold mb-2">Santander Bank
+                                </p>
+                                <p
+                                    class="text-xl md:text-2xl font-mono font-bold text-gray-900 tracking-tight break-all">
                                     13 1500 1793 1217 9004 2633 0000
                                 </p>
                             </div>
 
                             <div>
-                                <p class="text-sm text-gray-500 uppercase tracking-wide font-medium mb-1">Tytuł przelewu / zlecenia stałego</p>
-                                <p class="text-gray-900 font-medium bg-gray-200 inline-block px-3 py-1 rounded">Darowizna na cele statutowe stowarzyszenia</p>
+                                <p class="text-sm text-gray-500 uppercase tracking-wide font-medium mb-1">Tytuł przelewu
+                                    / zlecenia stałego</p>
+                                <p class="text-gray-900 font-medium bg-gray-200 inline-block px-3 py-1 rounded">
+                                    Darowizna na cele statutowe stowarzyszenia</p>
                             </div>
                         </div>
                     </div>
                 </div>
-                
+
                 <div class="order-1 lg:order-2">
                     <h2 class="text-3xl font-bold text-gray-900 mb-6 flex items-center gap-3">
                         <i data-lucide="heart" class="w-8 h-8 text-primary"></i>
                         Darowizna
                     </h2>
                     <p class="text-lg text-gray-600 mb-6 leading-relaxed">
-                        Zwracamy się z prośbą o rozważenie decyzji pomocy materialnej na rzecz naszego Stowarzyszenia przy D.A. „Wawrzyny” w postaci <strong>DAROWIZNY</strong>. 
+                        Zwracamy się z prośbą o rozważenie decyzji pomocy materialnej na rzecz naszego Stowarzyszenia
+                        przy D.A. „Wawrzyny” w postaci <strong>DAROWIZNY</strong>.
                     </p>
                     <p class="text-gray-600 mb-6">
-                        Darowizny mogą być przekazywane przez cały rok. Ich realizacja może odbywać się poprzez wpłaty indywidualne lub poprzez zlecenie stałe.
+                        Darowizny mogą być przekazywane przez cały rok. Ich realizacja może odbywać się poprzez wpłaty
+                        indywidualne lub poprzez zlecenie stałe.
                     </p>
-                    
+
                     <div class="flex gap-4 items-start bg-blue-50 p-5 rounded-xl border border-blue-100 mb-8">
                         <i data-lucide="info" class="w-6 h-6 text-blue-600 flex-shrink-0 mt-0.5"></i>
                         <p class="text-sm text-blue-900">
-                            <strong>Ważne:</strong> Osoby fizyczne mogą dokonać odliczenia od dochodu w wysokości dokonanej darowizny, nie więcej jednak niż 6% dochodu w roku podatkowym.
+                            <strong>Ważne:</strong> Osoby fizyczne mogą dokonać odliczenia od dochodu w wysokości
+                            dokonanej darowizny, nie więcej jednak niż 6% dochodu w roku podatkowym.
                         </p>
                     </div>
 
                     <p class="text-xl font-medium text-gray-900 italic border-l-4 border-primary pl-4">
-                        Od Państwa decyzji zależy utrzymanie i dalszy rozwój działalności Stowarzyszenia. Wszystkim, którzy zechcą odpowiedzieć na naszą prośbę – serdecznie dziękujemy!
+                        Od Państwa decyzji zależy utrzymanie i dalszy rozwój działalności Stowarzyszenia. Wszystkim,
+                        którzy zechcą odpowiedzieć na naszą prośbę – serdecznie dziękujemy!
                     </p>
                     <p class="mt-8 font-bold text-primary text-xl">
                         Każda chwila jest szansą na lepszą zmianę naszego jutra!
@@ -390,7 +465,8 @@
         <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
             <div class="text-center max-w-3xl mx-auto mb-16">
                 <h2 class="text-3xl font-bold text-gray-900 mb-4">Nasza Działalność i Cele</h2>
-                <p class="text-gray-600 text-lg">Zobacz w jakich obszarach działamy i co staramy się osiągnąć poprzez naszą pracę.</p>
+                <p class="text-gray-600 text-lg">Zobacz w jakich obszarach działamy i co staramy się osiągnąć poprzez
+                    naszą pracę.</p>
             </div>
 
             <!-- Branże -->
@@ -400,16 +476,33 @@
                     Obszary działalności (Branże)
                 </h3>
                 <div class="flex flex-wrap gap-3">
-                    <span class="bg-white px-4 py-2 rounded-full text-sm font-medium text-gray-700 border border-gray-200 shadow-sm hover:border-primary hover:text-primary transition-colors cursor-default">Działalność organizacji członkowskich</span>
-                    <span class="bg-white px-4 py-2 rounded-full text-sm font-medium text-gray-700 border border-gray-200 shadow-sm hover:border-primary hover:text-primary transition-colors cursor-default">Pomoc społeczna</span>
-                    <span class="bg-white px-4 py-2 rounded-full text-sm font-medium text-gray-700 border border-gray-200 shadow-sm hover:border-primary hover:text-primary transition-colors cursor-default">Turystyka</span>
-                    <span class="bg-white px-4 py-2 rounded-full text-sm font-medium text-gray-700 border border-gray-200 shadow-sm hover:border-primary hover:text-primary transition-colors cursor-default">Administracja biurowa</span>
-                    <span class="bg-white px-4 py-2 rounded-full text-sm font-medium text-gray-700 border border-gray-200 shadow-sm hover:border-primary hover:text-primary transition-colors cursor-default">Edukacja</span>
-                    <span class="bg-white px-4 py-2 rounded-full text-sm font-medium text-gray-700 border border-gray-200 shadow-sm hover:border-primary hover:text-primary transition-colors cursor-default">Sport i rekreacja</span>
-                    <span class="bg-white px-4 py-2 rounded-full text-sm font-medium text-gray-700 border border-gray-200 shadow-sm hover:border-primary hover:text-primary transition-colors cursor-default">Kultura i rozrywka</span>
-                    <span class="bg-white px-4 py-2 rounded-full text-sm font-medium text-gray-700 border border-gray-200 shadow-sm hover:border-primary hover:text-primary transition-colors cursor-default">Działalność wydawnicza i filmowa</span>
-                    <span class="bg-white px-4 py-2 rounded-full text-sm font-medium text-gray-700 border border-gray-200 shadow-sm hover:border-primary hover:text-primary transition-colors cursor-default">IT i hosting</span>
-                    <span class="bg-white px-4 py-2 rounded-full text-sm font-medium text-gray-700 border border-gray-200 shadow-sm hover:border-primary hover:text-primary transition-colors cursor-default">Poligrafia</span>
+                    <span
+                        class="bg-white px-4 py-2 rounded-full text-sm font-medium text-gray-700 border border-gray-200 shadow-sm hover:border-primary hover:text-primary transition-colors cursor-default">Działalność
+                        organizacji członkowskich</span>
+                    <span
+                        class="bg-white px-4 py-2 rounded-full text-sm font-medium text-gray-700 border border-gray-200 shadow-sm hover:border-primary hover:text-primary transition-colors cursor-default">Pomoc
+                        społeczna</span>
+                    <span
+                        class="bg-white px-4 py-2 rounded-full text-sm font-medium text-gray-700 border border-gray-200 shadow-sm hover:border-primary hover:text-primary transition-colors cursor-default">Turystyka</span>
+                    <span
+                        class="bg-white px-4 py-2 rounded-full text-sm font-medium text-gray-700 border border-gray-200 shadow-sm hover:border-primary hover:text-primary transition-colors cursor-default">Administracja
+                        biurowa</span>
+                    <span
+                        class="bg-white px-4 py-2 rounded-full text-sm font-medium text-gray-700 border border-gray-200 shadow-sm hover:border-primary hover:text-primary transition-colors cursor-default">Edukacja</span>
+                    <span
+                        class="bg-white px-4 py-2 rounded-full text-sm font-medium text-gray-700 border border-gray-200 shadow-sm hover:border-primary hover:text-primary transition-colors cursor-default">Sport
+                        i rekreacja</span>
+                    <span
+                        class="bg-white px-4 py-2 rounded-full text-sm font-medium text-gray-700 border border-gray-200 shadow-sm hover:border-primary hover:text-primary transition-colors cursor-default">Kultura
+                        i rozrywka</span>
+                    <span
+                        class="bg-white px-4 py-2 rounded-full text-sm font-medium text-gray-700 border border-gray-200 shadow-sm hover:border-primary hover:text-primary transition-colors cursor-default">Działalność
+                        wydawnicza i filmowa</span>
+                    <span
+                        class="bg-white px-4 py-2 rounded-full text-sm font-medium text-gray-700 border border-gray-200 shadow-sm hover:border-primary hover:text-primary transition-colors cursor-default">IT
+                        i hosting</span>
+                    <span
+                        class="bg-white px-4 py-2 rounded-full text-sm font-medium text-gray-700 border border-gray-200 shadow-sm hover:border-primary hover:text-primary transition-colors cursor-default">Poligrafia</span>
                 </div>
             </div>
 
@@ -420,38 +513,77 @@
                     Główne cele Stowarzyszenia
                 </h3>
                 <p class="text-gray-700 font-medium mb-6">
-                    Celem działalności stowarzyszenia jest pomoc w funkcjonowaniu Duszpasterstwa Akademickiego Wawrzyny, a w szczególności:
+                    Celem działalności stowarzyszenia jest pomoc w funkcjonowaniu Duszpasterstwa Akademickiego Wawrzyny,
+                    a w szczególności:
                 </p>
-                
+
                 <!-- Przewijana lista z celami żeby nie zajmowała za dużo miejsca -->
                 <div class="h-96 overflow-y-auto pr-4 scrollbar-thin space-y-3">
                     <ul class="space-y-3 text-sm text-gray-600">
-                        <li class="flex items-start gap-3"><i data-lucide="check" class="w-5 h-5 text-primary flex-shrink-0"></i> wspieranie aktywności i integracji życia studenckiego i akademickiego</li>
-                        <li class="flex items-start gap-3"><i data-lucide="check" class="w-5 h-5 text-primary flex-shrink-0"></i> krzewienie kultury chrześcijańskiej</li>
-                        <li class="flex items-start gap-3"><i data-lucide="check" class="w-5 h-5 text-primary flex-shrink-0"></i> organizowanie pomocy finansowej utrzymującej duszpasterstwo akademickie i jego działalność</li>
-                        <li class="flex items-start gap-3"><i data-lucide="check" class="w-5 h-5 text-primary flex-shrink-0"></i> rozwijanie i upowszechnianie kultury, sztuki, nauki i ruchu studenckiego</li>
-                        <li class="flex items-start gap-3"><i data-lucide="check" class="w-5 h-5 text-primary flex-shrink-0"></i> edukacja ekologiczna, zdrowotna, ekonomiczna, społeczna, etyczna i językowa oraz wychowanie</li>
-                        <li class="flex items-start gap-3"><i data-lucide="check" class="w-5 h-5 text-primary flex-shrink-0"></i> popularyzacja nauki, promocja i organizacja wolontariatu</li>
-                        <li class="flex items-start gap-3"><i data-lucide="check" class="w-5 h-5 text-primary flex-shrink-0"></i> docieranie z chrześcijańską dobrą nowiną do jak największej liczby osób</li>
-                        <li class="flex items-start gap-3"><i data-lucide="check" class="w-5 h-5 text-primary flex-shrink-0"></i> dynamizacja i koordynacja działalności istniejących organizacji i ruchów studenckich</li>
-                        <li class="flex items-start gap-3"><i data-lucide="check" class="w-5 h-5 text-primary flex-shrink-0"></i> pogłębianie życia duchowego i religijnego członków stowarzyszenia</li>
-                        <li class="flex items-start gap-3"><i data-lucide="check" class="w-5 h-5 text-primary flex-shrink-0"></i> pomoc ubogim, potrzebującym, niepełnosprawnym, ofiarom katastrof</li>
-                        <li class="flex items-start gap-3"><i data-lucide="check" class="w-5 h-5 text-primary flex-shrink-0"></i> wspomaganie postaw wzmacniających życie rodzinne</li>
-                        <li class="flex items-start gap-3"><i data-lucide="check" class="w-5 h-5 text-primary flex-shrink-0"></i> podtrzymywanie tradycji narodowych, pielęgnowanie polskości</li>
-                        <li class="flex items-start gap-3"><i data-lucide="check" class="w-5 h-5 text-primary flex-shrink-0"></i> działalność charytatywna, dobroczynna i pomoc społeczna</li>
-                        <li class="flex items-start gap-3"><i data-lucide="check" class="w-5 h-5 text-primary flex-shrink-0"></i> wspomaganie rozwoju wspólnot i społeczności lokalnych</li>
-                        <li class="flex items-start gap-3"><i data-lucide="check" class="w-5 h-5 text-primary flex-shrink-0"></i> ochrona dóbr kultury i sztuki, przyrody, zdrowia</li>
-                        <li class="flex items-start gap-3"><i data-lucide="check" class="w-5 h-5 text-primary flex-shrink-0"></i> organizowanie wypoczynku, upowszechnianie kultury fizycznej i sportu</li>
-                        <li class="flex items-start gap-3"><i data-lucide="check" class="w-5 h-5 text-primary flex-shrink-0"></i> przeciwdziałanie patologiom społecznym</li>
-                        <li class="flex items-start gap-3"><i data-lucide="check" class="w-5 h-5 text-primary flex-shrink-0"></i> integracja działań na rzecz wspólnoty europejskiej</li>
+                        <li class="flex items-start gap-3"><i data-lucide="check"
+                                class="w-5 h-5 text-primary flex-shrink-0"></i> wspieranie aktywności i integracji życia
+                            studenckiego i akademickiego</li>
+                        <li class="flex items-start gap-3"><i data-lucide="check"
+                                class="w-5 h-5 text-primary flex-shrink-0"></i> krzewienie kultury chrześcijańskiej</li>
+                        <li class="flex items-start gap-3"><i data-lucide="check"
+                                class="w-5 h-5 text-primary flex-shrink-0"></i> organizowanie pomocy finansowej
+                            utrzymującej duszpasterstwo akademickie i jego działalność</li>
+                        <li class="flex items-start gap-3"><i data-lucide="check"
+                                class="w-5 h-5 text-primary flex-shrink-0"></i> rozwijanie i upowszechnianie kultury,
+                            sztuki, nauki i ruchu studenckiego</li>
+                        <li class="flex items-start gap-3"><i data-lucide="check"
+                                class="w-5 h-5 text-primary flex-shrink-0"></i> edukacja ekologiczna, zdrowotna,
+                            ekonomiczna, społeczna, etyczna i językowa oraz wychowanie</li>
+                        <li class="flex items-start gap-3"><i data-lucide="check"
+                                class="w-5 h-5 text-primary flex-shrink-0"></i> popularyzacja nauki, promocja i
+                            organizacja wolontariatu</li>
+                        <li class="flex items-start gap-3"><i data-lucide="check"
+                                class="w-5 h-5 text-primary flex-shrink-0"></i> docieranie z chrześcijańską dobrą nowiną
+                            do jak największej liczby osób</li>
+                        <li class="flex items-start gap-3"><i data-lucide="check"
+                                class="w-5 h-5 text-primary flex-shrink-0"></i> dynamizacja i koordynacja działalności
+                            istniejących organizacji i ruchów studenckich</li>
+                        <li class="flex items-start gap-3"><i data-lucide="check"
+                                class="w-5 h-5 text-primary flex-shrink-0"></i> pogłębianie życia duchowego i
+                            religijnego członków stowarzyszenia</li>
+                        <li class="flex items-start gap-3"><i data-lucide="check"
+                                class="w-5 h-5 text-primary flex-shrink-0"></i> pomoc ubogim, potrzebującym,
+                            niepełnosprawnym, ofiarom katastrof</li>
+                        <li class="flex items-start gap-3"><i data-lucide="check"
+                                class="w-5 h-5 text-primary flex-shrink-0"></i> wspomaganie postaw wzmacniających życie
+                            rodzinne</li>
+                        <li class="flex items-start gap-3"><i data-lucide="check"
+                                class="w-5 h-5 text-primary flex-shrink-0"></i> podtrzymywanie tradycji narodowych,
+                            pielęgnowanie polskości</li>
+                        <li class="flex items-start gap-3"><i data-lucide="check"
+                                class="w-5 h-5 text-primary flex-shrink-0"></i> działalność charytatywna, dobroczynna i
+                            pomoc społeczna</li>
+                        <li class="flex items-start gap-3"><i data-lucide="check"
+                                class="w-5 h-5 text-primary flex-shrink-0"></i> wspomaganie rozwoju wspólnot i
+                            społeczności lokalnych</li>
+                        <li class="flex items-start gap-3"><i data-lucide="check"
+                                class="w-5 h-5 text-primary flex-shrink-0"></i> ochrona dóbr kultury i sztuki, przyrody,
+                            zdrowia</li>
+                        <li class="flex items-start gap-3"><i data-lucide="check"
+                                class="w-5 h-5 text-primary flex-shrink-0"></i> organizowanie wypoczynku,
+                            upowszechnianie kultury fizycznej i sportu</li>
+                        <li class="flex items-start gap-3"><i data-lucide="check"
+                                class="w-5 h-5 text-primary flex-shrink-0"></i> przeciwdziałanie patologiom społecznym
+                        </li>
+                        <li class="flex items-start gap-3"><i data-lucide="check"
+                                class="w-5 h-5 text-primary flex-shrink-0"></i> integracja działań na rzecz wspólnoty
+                            europejskiej</li>
                     </ul>
                 </div>
 
                 <div class="mt-8 pt-6 border-t border-gray-100">
                     <h4 class="font-bold text-gray-900 mb-3">Ponadto naszą misją jest:</h4>
                     <ul class="space-y-3 text-sm text-gray-600">
-                        <li class="flex items-start gap-3"><i data-lucide="star" class="w-5 h-5 text-yellow-500 flex-shrink-0"></i> Działalność dotycząca zachowania pamięci i dziedzictwa duchowego ks. Stanisława Orzechowskiego dla przyszłych pokoleń.</li>
-                        <li class="flex items-start gap-3"><i data-lucide="book-open" class="w-5 h-5 text-blue-500 flex-shrink-0"></i> Działalność ewangelizacyjna.</li>
+                        <li class="flex items-start gap-3"><i data-lucide="star"
+                                class="w-5 h-5 text-yellow-500 flex-shrink-0"></i> Działalność dotycząca zachowania
+                            pamięci i dziedzictwa duchowego ks. Stanisława Orzechowskiego dla przyszłych pokoleń.</li>
+                        <li class="flex items-start gap-3"><i data-lucide="book-open"
+                                class="w-5 h-5 text-blue-500 flex-shrink-0"></i> Działalność ewangelizacyjna.</li>
                     </ul>
                 </div>
             </div>
@@ -459,188 +591,32 @@
     </section>
 
     <!-- Wydarzenia 2025 Section -->
-    <section id="wydarzenia" class="py-20 bg-white">
-        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-            <div class="text-center max-w-3xl mx-auto mb-16">
-                <div class="inline-flex items-center gap-2 px-4 py-1.5 rounded-full bg-primary/10 text-primary text-sm font-bold mb-4">
-                    <i data-lucide="calendar" class="w-4 h-4"></i>
-                    Podsumowanie Roku
-                </div>
-                <h2 class="text-3xl md:text-4xl font-bold text-gray-900 mb-4">Wydarzenia 2025</h2>
-                <p class="text-gray-600 text-lg">A oto przedstawienie niektórych wydarzeń jakie miały miejsce w 2025 roku:</p>
-            </div>
-
-            <div class="space-y-12">
-                <!-- Event 1: Przedszkole -->
-                <div class="grid grid-cols-1 lg:grid-cols-12 gap-8 items-stretch bg-gray-50 rounded-3xl overflow-hidden border border-gray-100 hover:shadow-xl transition-shadow duration-300">
-                    <div class="lg:col-span-4 min-h-[300px] relative">
-                        <img src="https://images.unsplash.com/photo-1544367567-0f2fcb009e0b?auto=format&fit=crop&q=80" alt="Przedszkole" class="absolute inset-0 w-full h-full object-cover">
-                        <div class="absolute top-4 left-4 bg-primary text-white px-4 py-1.5 rounded-full text-sm font-bold shadow-lg">
-                            22 marca 2025
-                        </div>
-                    </div>
-                    <div class="lg:col-span-8 p-8 lg:p-10 flex flex-col justify-center">
-                        <h3 class="text-2xl font-bold text-gray-900 mb-4">Orzech patronem wrocławskiego przedszkola</h3>
-                        <p class="text-gray-600 mb-4 leading-relaxed">
-                            Przedszkole Publiczne „Koszałki-Opałki” we Wrocławiu otrzymało imię ks. Stanisława „Orzecha” Orzechowskiego. Był to dla naszego Stowarzyszenia moment niezwykle ważny i bliski sercu.
-                        </p>
-                        <p class="text-gray-600 mb-6 leading-relaxed">
-                            Uroczystość rozpoczęła się Mszą Świętą, a następnie wspólne świętowanie przeniosło się do przedszkola, gdzie odsłonięto pamiątkową tablicę i odśpiewano hymn przygotowany na tę okazję.
-                        </p>
-                        <div class="bg-white p-5 rounded-xl border border-gray-200 text-sm text-gray-700 italic border-l-4 border-l-primary">
-                            „Cieszymy się, że już od najmłodszych lat dzieci uczestniczą w inicjatywach takich jak «Dekalog dla Małych», ucząc się, czym jest dobro, odpowiedzialność i wrażliwość na drugiego człowieka. Wierzymy, że to właśnie tam «wykuwają się» wartości, które w przyszłości pomogą podejmować mądre, życiowe decyzje. Mamy nadzieję, że takich inicjatyw będzie coraz więcej.”
-                        </div>
-                    </div>
-                </div>
-
-                <!-- Event 2: Izba Pamięci -->
-                <div class="grid grid-cols-1 lg:grid-cols-12 gap-8 items-stretch bg-gray-50 rounded-3xl overflow-hidden border border-gray-100 hover:shadow-xl transition-shadow duration-300">
-                    <div class="lg:col-span-8 p-8 lg:p-10 order-2 lg:order-1 flex flex-col justify-center">
-                        <div class="flex items-center gap-2 text-primary font-bold mb-2">
-                             <i data-lucide="archive" class="w-5 h-5"></i>
-                             24 marca 2025
-                        </div>
-                        <h3 class="text-2xl font-bold text-gray-900 mb-4">Porozumienie z Ośrodkiem „Pamięć i Przyszłość” – tworzymy Izbę Pamięci ks. Orzechowskiego</h3>
-                        <p class="text-gray-600 mb-4 leading-relaxed">
-                            Podpisaliśmy porozumienie z Ośrodkiem „Pamięć i Przyszłość”. To ważny krok w upamiętnianiu naszego duszpasterza oraz włączeniu się w program „Ocalone dziedzictwa. Regionalne Izby Pamięci”.
-                        </p>
-                        <p class="text-gray-600 mb-6 leading-relaxed">
-                            Współpraca umożliwi digitalizację i zabezpieczenie dokumentów oraz pamiątek związanych z „Orzechem”. Obecnie trwają prace związane z przeglądaniem i porządkowaniem dokumentów, pism oraz pamiątek. Wierzymy, że dziedzictwo „Orzecha” przetrwa i będzie inspirować kolejne pokolenia.
-                        </p>
-                        
-                        <div class="bg-primary/5 p-6 rounded-2xl border border-primary/10">
-                            <h4 class="font-bold text-gray-900 mb-3 flex items-center gap-2 text-lg">
-                                <i data-lucide="search" class="w-5 h-5 text-primary"></i>
-                                Szukamy chętnych do pomocy!
-                            </h4>
-                            <p class="text-sm text-gray-600 mb-4">Przed nami ogrom pracy, aby to wszystko udokumentować. Jeśli chciałbyś pomóc w archiwizowaniu materiałów, skontaktuj się z nami:</p>
-                            <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-4 text-sm font-medium">
-                                <a href="mailto:stowarzyszenie@wawrzyny.wroc.pl" class="flex items-center gap-2 text-primary hover:underline">
-                                    <i data-lucide="mail" class="w-4 h-4"></i> stowarzyszenie@wawrzyny.wroc.pl
-                                </a>
-                                <div class="flex items-center gap-2 text-gray-700">
-                                    <i data-lucide="phone" class="w-4 h-4 text-primary"></i> Kuzyn: 608 095 757
-                                </div>
-                                <div class="flex items-center gap-2 text-gray-700">
-                                    <i data-lucide="phone" class="w-4 h-4 text-primary"></i> Grzegorz: 697 985 454
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="lg:col-span-4 min-h-[300px] relative order-1 lg:order-2">
-                        <img src="https://images.unsplash.com/photo-1456513080510-7bf3a84b82f8?auto=format&fit=crop&q=80" alt="Archiwizacja" class="absolute inset-0 w-full h-full object-cover">
-                    </div>
-                </div>
-
-                <!-- Event 3: Wystawa -->
-                <div class="bg-primary text-white rounded-3xl p-8 md:p-12 shadow-2xl relative overflow-hidden">
-                    <div class="absolute top-0 right-0 w-96 h-96 bg-white/5 rounded-full -mr-48 -mt-48 blur-3xl"></div>
-                    <div class="relative z-10">
-                        <div class="flex items-center gap-3 mb-8">
-                            <div class="bg-white/20 p-3 rounded-2xl border border-white/30 backdrop-blur-sm">
-                                <i data-lucide="image" class="w-8 h-8 text-white"></i>
-                            </div>
-                            <h3 class="text-3xl font-bold">Wystawa „Ma pecha, kto nie znał Orzecha”</h3>
-                        </div>
-                        <div class="grid grid-cols-1 lg:grid-cols-2 gap-12">
-                            <div>
-                                <p class="text-green-50 text-lg mb-8 leading-relaxed">
-                                    Od kilku lat towarzyszy nam wystawa prezentująca na 18 roll-upach duszpasterską działalność ks. Stanisława Orzechowskiego. Pokazaliśmy ją już w ponad 50 miejscach, a w tym roku także w Warszawie – w kościele św. Stanisława Kostki.
-                                </p>
-                                <div class="space-y-4">
-                                    <div class="bg-white/10 p-5 rounded-xl border border-white/20 italic text-sm relative">
-                                        <i data-lucide="quote" class="w-8 h-8 text-white/10 absolute top-4 right-4"></i>
-                                        „Jemu zawdzięczam, że od ok. 20 lat codziennie uczestniczę w Eucharystii i dziękuję za tego niezwykłego kapłana.”
-                                    </div>
-                                    <div class="bg-white/10 p-5 rounded-xl border border-white/20 italic text-sm relative">
-                                        <i data-lucide="quote" class="w-8 h-8 text-white/10 absolute top-4 right-4"></i>
-                                        „Wystawa jest zaproszeniem do spotkania z niezwykłą postacią i inspiracją do życia wiarą oraz otwartością na innych.” <br>— ks. Marek Kluwak
-                                    </div>
-                                </div>
-                            </div>
-                            <div class="bg-white text-gray-900 rounded-3xl p-8 shadow-xl">
-                                <h4 class="font-bold mb-4 flex items-center gap-2 text-xl text-primary">
-                                    <i data-lucide="map-pin" class="w-5 h-5"></i>
-                                    Zaproś wystawę do siebie
-                                </h4>
-                                <p class="text-gray-600 mb-8">Jeśli chcesz, aby wystawa zawitała do Twojej parafii lub miejscowości, skontaktuj się z nami:</p>
-                                <div class="space-y-4 font-medium">
-                                    <div class="flex items-center gap-3 p-3 bg-gray-50 rounded-xl"><i data-lucide="phone" class="w-5 h-5 text-primary"></i> Kuzyn: 608 095 757</div>
-                                    <div class="flex items-center gap-3 p-3 bg-gray-50 rounded-xl"><i data-lucide="phone" class="w-5 h-5 text-primary"></i> Mariusz: 607 324 063</div>
-                                    <a href="mailto:stowarzyszenie@wawrzyny.wroc.pl" class="flex items-center gap-3 p-3 bg-primary/10 rounded-xl text-primary hover:bg-primary/20 transition-colors">
-                                        <i data-lucide="mail" class="w-5 h-5"></i> stowarzyszenie@wawrzyny.wroc.pl
-                                    </a>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-
-                <!-- Event Group 4: Edukacyjno-Historyczne -->
-                <div>
-                    <h3 class="text-2xl font-bold text-gray-900 mb-8 flex items-center gap-3">
-                        <i data-lucide="book-marked" class="w-7 h-7 text-primary"></i>
-                        Wydarzenia edukacyjno – historyczne
-                    </h3>
-                    <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
-                        <!-- Item 1 -->
-                        <div class="bg-white p-8 rounded-3xl border border-gray-100 shadow-sm hover:shadow-md transition-shadow relative overflow-hidden group">
-                            <div class="absolute top-0 right-0 w-24 h-24 bg-primary/5 rounded-bl-full -mr-12 -mt-12 transition-transform group-hover:scale-110"></div>
-                            <div class="inline-block px-3 py-1 rounded bg-primary/10 text-primary font-bold text-xs mb-4">06.11.2025</div>
-                            <h4 class="font-bold text-gray-900 mb-3 text-lg">Panel dyskusyjny Civitas Christiana</h4>
-                            <p class="text-gray-600 text-sm leading-relaxed">
-                                Spotkanie pt. „Do żywego mnie obchodzi to, co się dzieje z Polską…” – patriotyzm według ks. Stanisława Orzechowskiego „Orzecha”.
-                            </p>
-                        </div>
-                        <!-- Item 2 -->
-                        <div class="bg-white p-8 rounded-3xl border border-gray-100 shadow-sm hover:shadow-md transition-shadow relative overflow-hidden group">
-                            <div class="absolute top-0 right-0 w-24 h-24 bg-primary/5 rounded-bl-full -mr-12 -mt-12 transition-transform group-hover:scale-110"></div>
-                            <div class="inline-block px-3 py-1 rounded bg-primary/10 text-primary font-bold text-xs mb-4">19.11.2025</div>
-                            <h4 class="font-bold text-gray-900 mb-3 text-lg">Oprowadzanie po Duszpasterstwie</h4>
-                            <p class="text-gray-600 text-sm leading-relaxed">
-                                Pierwsze w historii oprowadzanie po DA Wawrzyny. Spotkanie miało charakter historyczno-wspomnieniowy z prezentacją zdjęć archiwalnych.
-                            </p>
-                        </div>
-                        <!-- Item 3 -->
-                        <div class="bg-white p-8 rounded-3xl border border-gray-100 shadow-sm hover:shadow-md transition-shadow relative overflow-hidden group">
-                            <div class="absolute top-0 right-0 w-24 h-24 bg-primary/5 rounded-bl-full -mr-12 -mt-12 transition-transform group-hover:scale-110"></div>
-                            <div class="inline-block px-3 py-1 rounded bg-primary/10 text-primary font-bold text-xs mb-4">23.11.2025</div>
-                            <h4 class="font-bold text-gray-900 mb-3 text-lg">Kino Odra w Oławie – film i premiera</h4>
-                            <p class="text-gray-600 text-sm leading-relaxed">
-                                Pokaz filmu „Orzech – zawsze chciałem być z ludźmi” oraz premiera nowego odcinka z serii „Dekalog Orzecha” – „Rodzina to drużyna”.
-                            </p>
-                        </div>
-                    </div>
-                </div>
-
-                <div class="text-center py-12 border-t border-gray-100 mt-12">
-                    <p class="text-gray-500 italic max-w-2xl mx-auto">
-                        Odbyło się również wiele innych wydarzeń w 2025 roku, których – ze względu na ograniczone miejsce – nie możemy tu przedstawić.
-                    </p>
-                </div>
-            </div>
-        </div>
-    </section>
+    <section id="wydarzenia" class="py-20 bg-white overflow-hidden"></section>
 
     <!-- Galeria Placeholder -->
     <section class="py-20 bg-white border-t border-gray-200">
         <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
             <h2 class="text-3xl font-bold text-gray-900 mb-4">Galeria</h2>
-            <p class="text-gray-600 mb-12 max-w-2xl mx-auto">Wydarzenia, jakie miały miejsce w poprzednich latach dzięki wsparciu z 1,5%.</p>
-            
+            <p class="text-gray-600 mb-12 max-w-2xl mx-auto">Wydarzenia, jakie miały miejsce w poprzednich latach dzięki
+                wsparciu z 1,5%.</p>
+
             <div class="gallery-grid">
                 <!-- Placeholders dla zdjęć -->
                 <div class="gallery-item bg-gray-200">
-                    <img src="https://images.unsplash.com/photo-1523580494863-6f3031224c94?ixlib=rb-4.0.3&auto=format&fit=crop&w=600&q=80" alt="Wydarzenie 1">
+                    <img src="https://images.unsplash.com/photo-1523580494863-6f3031224c94?ixlib=rb-4.0.3&auto=format&fit=crop&w=600&q=80"
+                        alt="Wydarzenie 1">
                 </div>
                 <div class="gallery-item bg-gray-200">
-                    <img src="https://images.unsplash.com/photo-1511632765486-a01980e01a18?ixlib=rb-4.0.3&auto=format&fit=crop&w=600&q=80" alt="Wydarzenie 2">
+                    <img src="https://images.unsplash.com/photo-1511632765486-a01980e01a18?ixlib=rb-4.0.3&auto=format&fit=crop&w=600&q=80"
+                        alt="Wydarzenie 2">
                 </div>
                 <div class="gallery-item bg-gray-200">
-                    <img src="https://images.unsplash.com/photo-1438232992991-995b7058bbb3?ixlib=rb-4.0.3&auto=format&fit=crop&w=600&q=80" alt="Wydarzenie 3">
+                    <img src="https://images.unsplash.com/photo-1438232992991-995b7058bbb3?ixlib=rb-4.0.3&auto=format&fit=crop&w=600&q=80"
+                        alt="Wydarzenie 3">
                 </div>
                 <div class="gallery-item bg-gray-200">
-                    <img src="https://images.unsplash.com/photo-1529390079861-591de354faf5?ixlib=rb-4.0.3&auto=format&fit=crop&w=600&q=80" alt="Wydarzenie 4">
+                    <img src="https://images.unsplash.com/photo-1529390079861-591de354faf5?ixlib=rb-4.0.3&auto=format&fit=crop&w=600&q=80"
+                        alt="Wydarzenie 4">
                 </div>
             </div>
         </div>
@@ -650,7 +626,7 @@
     <footer id="kontakt" class="bg-gray-900 text-white pt-16 pb-8 border-t-4 border-primary mt-auto">
         <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
             <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-12 mb-12">
-                
+
                 <!-- O nas w stopce -->
                 <div class="lg:col-span-1">
                     <a href="#" class="flex items-center gap-3 mb-6">
@@ -665,8 +641,10 @@
                         Stowarzyszenie posiada status Organizacji Pożytku Publicznego (OPP).
                     </p>
                     <div class="flex items-center gap-4 text-gray-400">
-                        <a href="#" class="hover:text-primary transition-colors"><i data-lucide="facebook" class="w-5 h-5"></i></a>
-                        <a href="#" class="hover:text-primary transition-colors"><i data-lucide="instagram" class="w-5 h-5"></i></a>
+                        <a href="#" class="hover:text-primary transition-colors"><i data-lucide="facebook"
+                                class="w-5 h-5"></i></a>
+                        <a href="#" class="hover:text-primary transition-colors"><i data-lucide="instagram"
+                                class="w-5 h-5"></i></a>
                     </div>
                 </div>
 
@@ -719,21 +697,25 @@
                         </li>
                         <li class="flex items-center gap-3">
                             <i data-lucide="mail" class="w-4 h-4 text-primary flex-shrink-0"></i>
-                            <a href="mailto:stowarzyszenie@wawrzyny.wroc.pl" class="hover:text-white transition-colors">stowarzyszenie@wawrzyny.wroc.pl</a>
+                            <a href="mailto:stowarzyszenie@wawrzyny.wroc.pl"
+                                class="hover:text-white transition-colors">stowarzyszenie@wawrzyny.wroc.pl</a>
                         </li>
                         <li class="flex items-center gap-3">
                             <i data-lucide="globe" class="w-4 h-4 text-primary flex-shrink-0"></i>
-                            <a href="https://stowarzyszenie.wawrzyny.wroc.pl" class="hover:text-white transition-colors">stowarzyszenie.wawrzyny.wroc.pl</a>
+                            <a href="https://stowarzyszenie.wawrzyny.wroc.pl"
+                                class="hover:text-white transition-colors">stowarzyszenie.wawrzyny.wroc.pl</a>
                         </li>
                     </ul>
                 </div>
 
             </div>
 
-            <div class="border-t border-gray-800 pt-8 flex flex-col md:flex-row justify-between items-center gap-4 text-sm text-gray-500">
+            <div
+                class="border-t border-gray-800 pt-8 flex flex-col md:flex-row justify-between items-center gap-4 text-sm text-gray-500">
                 <p>&copy; Stowarzyszenie Przyjaciół Duszpasterstwa Akademickiego Wawrzyny 2026</p>
                 <p class="flex items-center gap-1">
-                    Made with <i data-lucide="heart" class="w-4 h-4 text-red-500 fill-red-500"></i> by <span class="text-gray-300 font-medium ml-1">WowkDigital</span>
+                    Made with <i data-lucide="heart" class="w-4 h-4 text-red-500 fill-red-500"></i> by <span
+                        class="text-gray-300 font-medium ml-1">WowkDigital</span>
                 </p>
             </div>
         </div>
@@ -741,6 +723,17 @@
 
     <!-- Scripts -->
     <script>
+        // Dynamiczne ładowanie sekcji wydarzeń
+        fetch('wydarzenia_2025.html')
+            .then(res => res.text())
+            .then(html => {
+                const target = document.getElementById('wydarzenia');
+                if (target) {
+                    target.innerHTML = html;
+                    lucide.createIcons();
+                }
+            });
+
         // Inicjalizacja ikon Lucide
         lucide.createIcons();
 
@@ -804,4 +797,5 @@
         });
     </script>
 </body>
+
 </html>
