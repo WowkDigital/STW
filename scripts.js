@@ -26,6 +26,12 @@ function initDynamicSections() {
         if (typeof buildGallery === 'function') buildGallery();
     });
 
+    // Sekcja Film Orzech
+    loadComponent('film-orzech', 'film_sekcja.html');
+
+    // Sekcja Dekalog Orzecha
+    loadComponent('dekalog-orzecha', 'dekalog_sekcja.html');
+
     // Sekcja Kalendarium 2026 (na głównej i v2)
     loadComponent('kalendarium', 'kalendarium_2026.html');
 
