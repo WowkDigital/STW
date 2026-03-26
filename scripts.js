@@ -37,6 +37,9 @@ function initDynamicSections() {
 
     // Sekcja Działalność
     loadComponent('dzialalnosc', 'dzialalnosc.html');
+
+    // Sekcja 1.5% Podatku
+    loadComponent('podatek', 'podatek_sekcja.html');
 }
 
 // Inicjalizacja przy ładowaniu strony

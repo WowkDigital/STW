@@ -135,137 +135,8 @@
     <!-- O nas / Parasol Bezpieczeństwa -->
     <section id="o-nas" class="py-20 bg-white"></section>
 
-    <!-- 1.5% Podatku Section -->
-    <section id="podatek" class="py-20 bg-gray-50 border-y border-gray-200">
-        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-            <div class="bg-white rounded-3xl shadow-xl overflow-hidden">
-                <div class="grid grid-cols-1 lg:grid-cols-5">
-
-                    <!-- Lewa strona - KRS -->
-                    <div class="lg:col-span-2 bg-primary text-white p-10 flex flex-col justify-center">
-                        <h2 class="text-3xl md:text-4xl font-bold mb-4">Z 1,5% WIELE DOBRA!</h2>
-                        <p class="text-green-50 text-lg mb-8 opacity-90">
-                            Przed nami czas rozliczeń i decyzji jakiej organizacji przekażemy 1,5% podatku. Prosimy o
-                            Twoje wsparcie.
-                        </p>
-
-                        <div
-                            class="bg-white/10 rounded-2xl p-6 border border-white/20 backdrop-blur-sm mb-8 text-center transform hover:scale-105 transition-transform">
-                            <p class="text-sm uppercase tracking-wider mb-2 font-medium opacity-80">Nasz numer KRS</p>
-                            <p class="text-4xl md:text-5xl font-black font-mono tracking-wider flex items-center justify-center gap-3 cursor-pointer group"
-                                onclick="copyKRS()" title="Kliknij, aby skopiować">
-                                0000086185
-                                <i data-lucide="copy"
-                                    class="w-6 h-6 opacity-50 group-hover:opacity-100 transition-opacity"></i>
-                            </p>
-                            <p id="copy-msg" class="text-green-300 text-sm mt-2 h-5 opacity-0 transition-opacity">
-                                Skopiowano do schowka!</p>
-                        </div>
-
-                        <div class="space-y-4 text-sm opacity-90">
-                            <p class="flex items-start gap-3">
-                                <i data-lucide="check-circle-2" class="w-5 h-5 flex-shrink-0 mt-0.5"></i>
-                                Brak dodatkowych obciążeń dla Ciebie
-                            </p>
-                            <p class="flex items-start gap-3">
-                                <i data-lucide="check-circle-2" class="w-5 h-5 flex-shrink-0 mt-0.5"></i>
-                                Sam decydujesz, na co idą Twoje podatki
-                            </p>
-                            <p class="flex items-start gap-3">
-                                <i data-lucide="check-circle-2" class="w-5 h-5 flex-shrink-0 mt-0.5"></i>
-                                Wspierasz Duszpasterstwo Akademickie
-                            </p>
-                        </div>
-                    </div>
-
-                    <!-- Prawa strona - Opis i programy -->
-                    <div class="lg:col-span-3 p-10 lg:p-12">
-                        <h3 class="text-2xl font-bold text-gray-900 mb-4">Przyjaciele, Sympatycy, Drogie Wawrzyny!</h3>
-                        <p class="text-gray-600 mb-6 leading-relaxed">
-                            Tworzenie wspólnoty to jednocześnie praca i obowiązek, ale zarazem wielkie błogosławieństwo.
-                            To czas, który kształtuje i przygotowuje człowieka na resztę dorosłego życia. Dostrzeżenie
-                            daru, jakim jest Duszpasterstwo oraz umiejętność podziękowania za to, czego w nim
-                            doświadczyliśmy, jest wyrazem dojrzałości oraz wdzięczności.
-                        </p>
-                        <p class="text-gray-600 mb-8 font-medium">
-                            I tak jak nigdy nie przestaje się być członkiem wspólnoty, tak nigdy nie przestaje się być
-                            za nią odpowiedzialnym. Dziękujemy za pomoc, którą otrzymaliśmy do tej pory!
-                        </p>
-
-                        <h4 class="text-xl font-bold text-gray-900 mb-4 flex items-center gap-2">
-                            <i data-lucide="gift" class="w-5 h-5 text-primary"></i>
-                            Dzięki Waszym wpłatom wsparliśmy:
-                        </h4>
-                        <div
-                            class="bg-gray-50 rounded-xl p-5 border border-gray-100 mb-8 text-sm text-gray-600 list-grid">
-                            <ul class="space-y-2">
-                                <li class="flex items-center gap-2"><i data-lucide="dot" class="text-primary"></i>lekcje
-                                    religii i wykłady patriotyczne</li>
-                                <li class="flex items-center gap-2"><i data-lucide="dot"
-                                        class="text-primary"></i>spotkania odnowy w Duchu Św.</li>
-                                <li class="flex items-center gap-2"><i data-lucide="dot"
-                                        class="text-primary"></i>warsztaty muzyczne</li>
-                                <li class="flex items-center gap-2"><i data-lucide="dot"
-                                        class="text-primary"></i>wyjazdy studenckie i adaptacyjne</li>
-                            </ul>
-                            <ul class="space-y-2">
-                                <li class="flex items-center gap-2"><i data-lucide="dot"
-                                        class="text-primary"></i>artykuły spożywcze (śniadania, wieczerze)</li>
-                                <li class="flex items-center gap-2"><i data-lucide="dot"
-                                        class="text-primary"></i>rekolekcje Wielkopostne i Adwentowe</li>
-                                <li class="flex items-center gap-2"><i data-lucide="dot" class="text-primary"></i>zakup
-                                    art. liturgicznych i sanitarnych</li>
-                                <li class="flex items-center gap-2"><i data-lucide="dot"
-                                        class="text-primary"></i>utrzymanie ośrodka (węgiel, sprzęt)</li>
-                            </ul>
-                        </div>
-
-                        <div class="pulse-container">
-                            <h4 class="text-lg font-bold text-gray-900 mb-4">Programy do darmowych rozliczeń PIT:</h4>
-                            <div class="grid grid-cols-1 md:grid-cols-3 gap-4">
-                                <!-- Card 1 -->
-                                <a href="https://www.podatki.gov.pl/" target="_blank"
-                                    class="border border-gray-200 bg-white rounded-xl p-4 hover:border-primary hover:shadow-md transition-all block group">
-                                    <h5
-                                        class="font-bold text-gray-900 mb-1 flex items-center gap-2 group-hover:text-primary transition-colors">
-                                        <i data-lucide="monitor" class="w-4 h-4 text-primary"></i>
-                                        Twój e-PIT
-                                    </h5>
-                                    <p class="text-xs text-gray-500">Oficjalny portal przygotowany przez Ministerstwo
-                                        Finansów</p>
-                                </a>
-                                <!-- Card 2 -->
-                                <a href="https://www.pitax.pl/rozliczenie-pit-online-0000086185/" target="_blank"
-                                    class="border border-gray-200 bg-white rounded-xl p-4 hover:border-primary hover:shadow-md transition-all block group">
-                                    <h5
-                                        class="font-bold text-gray-900 mb-1 flex items-center gap-2 group-hover:text-primary transition-colors">
-                                        <i data-lucide="calculator" class="w-4 h-4 text-primary"></i>
-                                        PITax
-                                    </h5>
-                                    <p class="text-xs text-gray-500">Darmowe Rozliczenie e-PIT z uwzględnieniem
-                                        wszystkich
-                                        ulg</p>
-                                </a>
-                                <!-- Card 3 -->
-                                <a href="https://www.e-pity.pl/pity-2025/organizacja-pozytku-publicznego-2026-KRS-0000086185"
-                                    target="_blank"
-                                    class="border border-gray-200 bg-white rounded-xl p-4 hover:border-primary hover:shadow-md transition-all block group">
-                                    <h5
-                                        class="font-bold text-gray-900 mb-1 flex items-center gap-2 group-hover:text-primary transition-colors">
-                                        <i data-lucide="file-text" class="w-4 h-4 text-primary"></i>
-                                        e-pity
-                                    </h5>
-                                    <p class="text-xs text-gray-500">Wygodny sposób, by rozliczyć Twoje e-pity online
-                                    </p>
-                                </a>
-                            </div>
-                        </div>
-
-                    </div>
-                </div>
-            </div>
-        </div>
-    </section>
+    <!-- 1.5% Podatku Section (ładowana dynamicznie) -->
+    <section id="podatek" class="py-20 bg-gray-50 border-y border-gray-200 scroll-mt-20"></section>
 
     <!-- Nowa sekcja: Kalendarium 2026 (ładowana dynamicznie) -->
     <section id="kalendarium" class="py-20 bg-white overflow-hidden scroll-mt-20"></section>
@@ -397,105 +268,147 @@
     </div>
 
     <!-- Footer / Kontakt -->
-    <footer id="kontakt" class="bg-gray-900 text-white pt-16 pb-8 border-t-4 border-primary mt-auto">
-        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-12 mb-12">
+    <footer id="kontakt" class="bg-gray-950 text-white pt-20 pb-10 border-t-8 border-primary mt-auto relative overflow-hidden">
+        <!-- Subtle background pattern/glow -->
+        <div class="absolute top-0 left-1/2 -translate-x-1/2 w-full h-px bg-gradient-to-r from-transparent via-primary/50 to-transparent"></div>
+        
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-x-12 gap-y-16 mb-16">
 
                 <!-- O nas w stopce -->
-                <div class="lg:col-span-1">
-                    <a href="#" class="flex items-center gap-3 mb-6">
-                        <div class="w-10 h-10 bg-primary rounded-lg flex items-center justify-center text-white">
+                <div class="space-y-6">
+                    <a href="#" class="flex items-center gap-3 group">
+                        <div class="w-12 h-12 bg-primary rounded-xl flex items-center justify-center text-white shadow-lg shadow-primary/20 transition-transform group-hover:scale-110">
                             <i data-lucide="church" class="w-6 h-6"></i>
                         </div>
-                        <span class="font-bold text-lg leading-tight text-white">
-                            Stowarzyszenie<br><span class="text-primary-light text-sm">Wawrzyny</span>
+                        <span class="font-extrabold text-xl leading-tight tracking-tight">
+                            Stowarzyszenie<br><span class="text-primary-light text-sm font-semibold opacity-80 uppercase tracking-widest">Wawrzyny</span>
                         </span>
                     </a>
-                    <p class="text-gray-400 text-sm mb-4">
-                        Stowarzyszenie posiada status Organizacji Pożytku Publicznego (OPP).
+                    <p class="text-gray-400 text-sm leading-relaxed max-w-xs">
+                        Stowarzyszenie Przyjaciół DA Wawrzyny posiada status <span class="text-white font-medium">Organizacji Pożytku Publicznego (OPP)</span>. Pomagamy budować wspólnotę i wspieramy inicjatywy duszpasterskie.
                     </p>
-                    <div class="flex items-center gap-4 text-gray-400">
-                        <a href="#" class="hover:text-primary transition-colors"><i data-lucide="facebook"
-                                class="w-5 h-5"></i></a>
-                        <a href="#" class="hover:text-primary transition-colors"><i data-lucide="instagram"
-                                class="w-5 h-5"></i></a>
+                    <div class="flex items-center gap-4">
+                        <a href="#" class="w-10 h-10 rounded-full bg-gray-900 flex items-center justify-center text-gray-400 hover:bg-primary hover:text-white transition-all duration-300">
+                            <i data-lucide="facebook" class="w-5 h-5"></i>
+                        </a>
+                        <a href="#" class="w-10 h-10 rounded-full bg-gray-900 flex items-center justify-center text-gray-400 hover:bg-primary hover:text-white transition-all duration-300">
+                            <i data-lucide="instagram" class="w-5 h-5"></i>
+                        </a>
                     </div>
                 </div>
 
                 <!-- Adres -->
                 <div>
-                    <h4 class="text-lg font-bold mb-6 border-b border-gray-700 pb-2">Dane Stowarzyszenia</h4>
-                    <ul class="space-y-4 text-gray-300 text-sm">
-                        <li class="flex items-start gap-3">
-                            <i data-lucide="map-pin" class="w-5 h-5 text-primary flex-shrink-0"></i>
-                            <span>
+                    <h4 class="text-white font-bold text-lg uppercase tracking-wider mb-8 flex items-center gap-2">
+                        <span class="w-8 h-px bg-primary"></span>
+                        Dane
+                    </h4>
+                    <ul class="space-y-6 text-gray-300">
+                        <li class="flex items-start gap-4 group">
+                            <div class="p-2 bg-gray-900 rounded-lg text-primary group-hover:bg-primary group-hover:text-white transition-colors duration-300">
+                                <i data-lucide="map-pin" class="w-5 h-5 flex-shrink-0"></i>
+                            </div>
+                            <span class="text-sm leading-relaxed">
+                                <strong class="block text-white mb-0.5">Siedziba</strong>
                                 ul. Bujwida 49/51<br>
                                 50-345 Wrocław
                             </span>
                         </li>
-                        <li class="flex items-center gap-3">
-                            <i data-lucide="file-digit" class="w-5 h-5 text-primary flex-shrink-0"></i>
-                            <span>NIP: 896 10 00 927</span>
+                        <li class="flex items-center gap-4 group">
+                            <div class="p-2 bg-gray-900 rounded-lg text-primary group-hover:bg-primary group-hover:text-white transition-colors duration-300">
+                                <i data-lucide="file-digit" class="w-5 h-5 flex-shrink-0"></i>
+                            </div>
+                            <span class="text-sm">
+                                <strong class="block text-white mb-0.5">NIP</strong>
+                                896 10 00 927
+                            </span>
                         </li>
-                        <li class="flex items-center gap-3">
-                            <i data-lucide="landmark" class="w-5 h-5 text-primary flex-shrink-0"></i>
-                            <span>KRS: 0000086185</span>
+                        <li class="flex items-center gap-4 group">
+                            <div class="p-2 bg-gray-900 rounded-lg text-primary group-hover:bg-primary group-hover:text-white transition-colors duration-300">
+                                <i data-lucide="landmark" class="w-5 h-5 flex-shrink-0"></i>
+                            </div>
+                            <span class="text-sm">
+                                <strong class="block text-white mb-0.5">KRS</strong>
+                                0000086185
+                            </span>
                         </li>
                     </ul>
                 </div>
 
                 <!-- Konto -->
                 <div>
-                    <h4 class="text-lg font-bold mb-6 border-b border-gray-700 pb-2">Konto do wpłat</h4>
-                    <ul class="space-y-4 text-gray-300 text-sm">
-                        <li>
-                            <p class="text-gray-400 mb-1 text-xs uppercase">Bank Santander</p>
-                            <p class="font-mono bg-gray-800 p-2 rounded text-center tracking-wider">
-                                13 1500 1793<br>1217 9004<br>2633 0000
+                    <h4 class="text-white font-bold text-lg uppercase tracking-wider mb-8 flex items-center gap-2 text-nowrap">
+                        <span class="w-8 h-px bg-primary"></span>
+                        Konto do wpłat
+                    </h4>
+                    <div class="space-y-6 text-sm">
+                        <div class="bg-gray-900/50 p-5 rounded-2xl border border-gray-800 hover:border-primary/30 transition-colors">
+                            <p class="text-gray-400 mb-3 text-xs uppercase font-bold tracking-widest">Bank Santander</p>
+                            <p class="font-mono text-white text-base leading-relaxed tracking-wider break-all md:break-normal">
+                                13 1500 1793 1217<br>9004 2633 0000
                             </p>
-                        </li>
-                    </ul>
+                            <p class="mt-4 text-xs text-gray-500 italic">Dziękujemy za każdą darowiznę!</p>
+                        </div>
+                        <a href="#podatek" class="inline-flex items-center gap-2 text-primary hover:text-primary-light font-medium transition-colors">
+                            <i data-lucide="heart" class="w-4 h-4"></i>
+                            Przekaż 1.5% podatku
+                        </a>
+                    </div>
                 </div>
 
                 <!-- Kontakt -->
                 <div>
-                    <h4 class="text-lg font-bold mb-6 border-b border-gray-700 pb-2">Kontakt</h4>
-                    <ul class="space-y-4 text-gray-300 text-sm">
+                    <h4 class="text-white font-bold text-lg uppercase tracking-wider mb-8 flex items-center gap-2">
+                        <span class="w-8 h-px bg-primary"></span>
+                        Kontakt
+                    </h4>
+                    <ul class="space-y-5 text-gray-300">
+                        <li class="mb-6">
+                            <p class="font-bold text-white text-base">Wiesław Kuzyn Wowk</p>
+                            <p class="text-gray-400 text-xs uppercase tracking-wide">Przewodniczący Stowarzyszenia</p>
+                        </li>
                         <li>
-                            <p class="font-medium text-white mb-1">Wiesław Kuzyn Wowk</p>
-                            <p class="text-gray-400 text-xs">Przewodniczący Stowarzyszenia</p>
+                            <a href="tel:+48608095757" class="flex items-center gap-4 group">
+                                <div class="p-2 bg-gray-900 rounded-lg text-primary group-hover:bg-primary group-hover:text-white transition-colors duration-300">
+                                    <i data-lucide="phone" class="w-4 h-4 flex-shrink-0"></i>
+                                </div>
+                                <span class="text-sm hover:text-white transition-colors">608 09 57 57</span>
+                            </a>
                         </li>
-                        <li class="flex items-center gap-3">
-                            <i data-lucide="phone" class="w-4 h-4 text-primary flex-shrink-0"></i>
-                            <a href="tel:+48608095757" class="hover:text-white transition-colors">608 09 57 57</a>
+                        <li>
+                            <a href="mailto:stowarzyszenie@wawrzyny.wroc.pl" class="flex items-center gap-4 group">
+                                <div class="p-2 bg-gray-900 rounded-lg text-primary group-hover:bg-primary group-hover:text-white transition-colors duration-300">
+                                    <i data-lucide="mail" class="w-4 h-4 flex-shrink-0"></i>
+                                </div>
+                                <span class="text-sm hover:text-white transition-colors truncate">stowarzyszenie@wawrzyny.wroc.pl</span>
+                            </a>
                         </li>
-                        <li class="flex items-center gap-3">
-                            <i data-lucide="mail" class="w-4 h-4 text-primary flex-shrink-0"></i>
-                            <a href="mailto:stowarzyszenie@wawrzyny.wroc.pl"
-                                class="hover:text-white transition-colors">stowarzyszenie@wawrzyny.wroc.pl</a>
-                        </li>
-                        <li class="flex items-center gap-3">
-                            <i data-lucide="globe" class="w-4 h-4 text-primary flex-shrink-0"></i>
-                            <a href="https://stowarzyszenie.wawrzyny.wroc.pl"
-                                class="hover:text-white transition-colors">stowarzyszenie.wawrzyny.wroc.pl</a>
+                        <li>
+                            <a href="https://stowarzyszenie.wawrzyny.wroc.pl/" target="_blank" class="flex items-center gap-4 group">
+                                <div class="p-2 bg-gray-900 rounded-lg text-primary group-hover:bg-primary group-hover:text-white transition-colors duration-300">
+                                    <i data-lucide="globe" class="w-4 h-4 flex-shrink-0"></i>
+                                </div>
+                                <span class="text-sm hover:text-white transition-colors">https://stowarzyszenie.wawrzyny.wroc.pl/</span>
+                            </a>
                         </li>
                     </ul>
                 </div>
 
             </div>
 
-            <div
-                class="border-t border-gray-800 pt-8 flex flex-col md:flex-row justify-between items-center gap-4 text-sm text-gray-500">
-                <p>&copy; Stowarzyszenie Przyjaciół Duszpasterstwa Akademickiego Wawrzyny 2026</p>
-                <p class="flex items-center gap-1">
-                    Made with <i data-lucide="heart" class="w-4 h-4 text-red-500 fill-red-500"></i> by <span
-                        class="text-gray-300 font-medium ml-1">WowkDigital</span>
-                </p>
+            <div class="border-t border-gray-900 pt-10 flex flex-col md:flex-row justify-between items-center gap-6 text-xs text-gray-500">
+                <p>&copy; 2026 <span class="text-gray-400">Stowarzyszenie Przyjaciół DA Wawrzyny</span>. Wszelkie prawa zastrzeżone.</p>
+                <div class="flex items-center gap-6">
+                    <p class="flex items-center gap-2">
+                        Made with <i data-lucide="heart" class="w-3.5 h-3.5 text-red-500 fill-red-500"></i> by 
+                        <a href="#" class="text-gray-300 font-semibold hover:text-primary transition-colors">WowkDigital</a>
+                    </p>
+                </div>
             </div>
         </div>
     </footer>
 
-    <!-- Scripts -->
     <script src="scripts.js"></script>
 </body>
 
