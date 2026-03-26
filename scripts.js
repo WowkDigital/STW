@@ -28,6 +28,9 @@ function initDynamicSections() {
 
     // Sekcja Kalendarium 2026 (na głównej i v2)
     loadComponent('kalendarium', 'kalendarium_2026.html');
+
+    // Sekcja Działalność
+    loadComponent('dzialalnosc', 'dzialalnosc.html');
 }
 
 // Inicjalizacja przy ładowaniu strony
